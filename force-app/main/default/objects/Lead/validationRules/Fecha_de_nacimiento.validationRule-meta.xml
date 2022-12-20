@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_nacimiento</fullName>
+    <active>true</active>
+    <description>Comprueba que una fecha de nacimiento no sea posterior al día de hoy</description>
+    <errorConditionFormula>Fecha_de_nacimiento__c  &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Fecha_de_nacimiento__c</errorDisplayField>
+    <errorMessage>La fecha de nacimiento no puede ser mayor a la fecha actual.</errorMessage>
+</ValidationRule>

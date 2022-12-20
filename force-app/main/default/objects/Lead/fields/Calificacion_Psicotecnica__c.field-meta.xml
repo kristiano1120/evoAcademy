@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calificacion_Psicotecnica__c</fullName>
+    <description>Resultado de la evaluación psicotécnica durante la entrevista</description>
+    <externalId>false</externalId>
+    <label>Calificación Psicotécnica</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Nivel</valueSetName>
+    </valueSet>
+</CustomField>

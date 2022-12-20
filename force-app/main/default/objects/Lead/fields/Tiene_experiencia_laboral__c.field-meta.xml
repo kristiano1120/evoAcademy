@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tiene_experiencia_laboral__c</fullName>
+    <description>Indica si el candidato ha tenido alguna experiencia laboral en otra empresa</description>
+    <externalId>false</externalId>
+    <label>¿Tiene experiencia laboral?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Decision</valueSetName>
+    </valueSet>
+</CustomField>

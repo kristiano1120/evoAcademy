@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_actual</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( (ISPICKVAL( Actualmente_est_estudiando__c , &apos;SI&apos;)) &amp;&amp; (  ISPICKVAL(Nivel_actual__c, &apos;&apos;))  , true, false)</errorConditionFormula>
+    <errorDisplayField>Nivel_actual__c</errorDisplayField>
+    <errorMessage>Ingrese el nivel o semestre actual</errorMessage>
+</ValidationRule>

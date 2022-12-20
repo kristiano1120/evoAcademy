@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_convertir_antes_de_tiempo</fullName>
+    <active>true</active>
+    <description>Valida que el prospecto no se convierta en cualquier etapa, debe atravesarlas todas</description>
+    <errorConditionFormula>AND( IsConverted == true ,   NOT(ISPICKVAL(PRIORVALUE( Status )  , &quot;Contratación&quot;))   )</errorConditionFormula>
+    <errorMessage>Para convertir este prospecto es necesario atravesar todas las etapas</errorMessage>
+</ValidationRule>

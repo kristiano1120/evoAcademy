@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_de_escolaridad__c</fullName>
+    <description>Nivel de escolaridad que posee el candidato</description>
+    <externalId>false</externalId>
+    <label>Nivel de escolaridad</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bachiller</fullName>
+                <default>false</default>
+                <label>Bachiller</label>
+            </value>
+            <value>
+                <fullName>Técnico</fullName>
+                <default>false</default>
+                <label>Técnico</label>
+            </value>
+            <value>
+                <fullName>Tecnólogo</fullName>
+                <default>false</default>
+                <label>Tecnólogo</label>
+            </value>
+            <value>
+                <fullName>Profesional</fullName>
+                <default>false</default>
+                <label>Profesional</label>
+            </value>
+            <value>
+                <fullName>Especialización</fullName>
+                <default>false</default>
+                <label>Especialización</label>
+            </value>
+            <value>
+                <fullName>Maestría</fullName>
+                <default>false</default>
+                <label>Maestría</label>
+            </value>
+            <value>
+                <fullName>Doctorado</fullName>
+                <default>false</default>
+                <label>Doctorado</label>
+            </value>
+            <value>
+                <fullName>Pregrado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pregrado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

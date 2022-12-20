@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclutamiento</fullName>
+    <description>Ruta a seguir para el proceso de reclutamiento</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Contratación</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Conversión</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cualificación psicotécnica</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cualificación técnica</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cultivación</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Identificación</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Preselección</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prueba presentada</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

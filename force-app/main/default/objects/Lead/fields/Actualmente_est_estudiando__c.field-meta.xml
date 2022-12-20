@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actualmente_est_estudiando__c</fullName>
+    <description>Indica si el estudiante se encuentra estudiando en la actualidad en una institución educativa</description>
+    <externalId>false</externalId>
+    <label>¿Actualmente está estudiando?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Decision</valueSetName>
+    </valueSet>
+</CustomField>

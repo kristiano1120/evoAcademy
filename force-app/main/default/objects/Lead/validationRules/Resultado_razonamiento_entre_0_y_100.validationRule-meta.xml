@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resultado_razonamiento_entre_0_y_100</fullName>
+    <active>true</active>
+    <description>Se valida que en este campo se ingrese un número válido (entre 0 y 100%)</description>
+    <errorConditionFormula>OR(Razonamiento_numerico__c &lt; 0, Razonamiento_numerico__c &gt; 1)</errorConditionFormula>
+    <errorDisplayField>Razonamiento_numerico__c</errorDisplayField>
+    <errorMessage>Debe ingresar un porcentaje válido (entre 0 y 100%)</errorMessage>
+</ValidationRule>

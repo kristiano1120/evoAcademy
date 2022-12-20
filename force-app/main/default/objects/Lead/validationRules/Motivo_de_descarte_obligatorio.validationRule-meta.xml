@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_descarte_obligatorio</fullName>
+    <active>true</active>
+    <description>cuando se pasa un prospecto a descartado se debe ingresar el motivo del descarte</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Descartado&quot;,
+Activo__c = true,
+ISPICKVAL(Motivo_de_descarte__c , &quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Motivo_de_descarte__c</errorDisplayField>
+    <errorMessage>debe inactivar el candidato y seleccionar un motivo de descarte para continuar.</errorMessage>
+</ValidationRule>

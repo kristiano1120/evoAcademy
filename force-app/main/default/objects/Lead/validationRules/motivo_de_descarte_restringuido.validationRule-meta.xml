@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>motivo_de_descarte_restringuido</fullName>
+    <active>true</active>
+    <description>motivo de descarte solo se puede ingresar si el prospecto esta en descartado</description>
+    <errorConditionFormula>AND(
+NOT(RecordType.Name = &quot;Descartado&quot;),
+Activo__c = true,
+NOT(ISPICKVAL(Motivo_de_descarte__c , &quot;&quot;))
+)</errorConditionFormula>
+    <errorMessage>No se admite ingresar motivo de descarte si el candidato no esta en descartado y no esta inactivo</errorMessage>
+</ValidationRule>

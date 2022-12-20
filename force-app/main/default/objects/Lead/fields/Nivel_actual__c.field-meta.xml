@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_actual__c</fullName>
+    <description>Nivel o semestre actual cursado por el candidato en una institución educativa</description>
+    <externalId>false</externalId>
+    <label>Nivel actual</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Nivel</valueSetName>
+    </valueSet>
+</CustomField>

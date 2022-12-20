@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Titulo_al_que_aspira</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( (ISPICKVAL( Actualmente_est_estudiando__c , &apos;SI&apos;)) &amp;&amp; (  ISBLANK(  T_tulo_al_que_aspira__c  )  )  , true, false)</errorConditionFormula>
+    <errorDisplayField>T_tulo_al_que_aspira__c</errorDisplayField>
+    <errorMessage>Ingrese el título al que está aspirando</errorMessage>
+</ValidationRule>

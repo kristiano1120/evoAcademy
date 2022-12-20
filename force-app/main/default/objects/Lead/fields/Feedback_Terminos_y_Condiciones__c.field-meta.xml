@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Terminos_y_Condiciones__c</fullName>
+    <description>Información que se proporciona durante la entrevista, bien sea una retroalimentación, nota o comentario.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Notas y/o comentarios</inlineHelpText>
+    <label>Feedback Terminos y Condiciones</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
