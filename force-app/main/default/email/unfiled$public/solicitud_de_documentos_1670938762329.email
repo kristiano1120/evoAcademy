@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block">
+              <table style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%;" src="{[devName:Bienvenido]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block">
+              <table style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;">
+                      <div style="text-align: center;">
+                       <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Recipient.Name}}}</span></span>
+                      </div>
+                      <div>
+                       &nbsp; 
+                       <div class="page" title="Page 1">
+                        <div class="section" style="background-color: rgb(100.000000%, 100.000000%, 100.000000%)">
+                         <div class="layoutArea">
+                          <div class="column">
+                           <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">¡Te felicitamos! Has completado nuestro proceso de selección y a partir de este momento te damos la bienvenida a e-volution. En este correo te solicitamos información importante para completar tu ingreso a empresa.</span></span></p>
+                           <div class="page" title="Page 1">
+                            <div class="section" style="background-color: rgb(100.000000%, 100.000000%, 100.000000%)">
+                             <div class="layoutArea">
+                              <div class="column">
+                              <ul>
+                              <li><span style="font-size:16px;">Hoja de vida</span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Nombre completo.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">N. de cédula y su fotocopia (escaneada)</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">N. de celular.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">N. de teléfono fijo.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Correo electrónico.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dirección completa (Departamento, Ciudad y Barrio) </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Lugar y fecha de nacimiento.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Nacionalidad.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">EPS (Certificado) </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">AFP (Certificado)</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Caja de compensación </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Certificados académicos</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Antecedentes Disciplinarios-Policía.</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Antecedentes Fiscales-Contraloría. </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Antecedentes Penales- Procuraduría. </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"># Cuenta bancaria / tipo de cuenta / Banco (Certificado) </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Estado civil</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">¿Tienes personas a cargo?</span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">¿Tienes hijos? ¿Cuántos? </span></span></li>
+                              <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Si tienes carnet de vacunación COVID-19, adjuntarlo de manera escaneada. </span></span></li>
+                              </ul>
+                              <div class="page" title="Page 2">
+                              <div class="section" style="background-color: rgb(100.000000%, 100.000000%, 100.000000%)">
+                              <div class="layoutArea">
+                              <div class="column">
+                              <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Por último deberás realizarte un examen médico ocupacional. Las indicaciones son las siguientes: <span style="font-weight: 700; color: rgb(34, 34, 34);">EXAMEN MÉDICO OCUPACIONAL CON ÉNFASIS OSTEOMUSCULAR Y EXAMEN VISUAL BASICO. </span><br /><br /> Cualquier inquietud la puedes realizar por medio de este correo.<br /><br /> Cordialmente<br /> {{{Sender.Name}}}<br /> {{{Sender.Title}}}<br /> {{{Sender.Email}}}</span></span></p>
+                              </div>
+                              </div>
+                              </div>
+                              </div><br /> &nbsp;
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><a href="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/" target="_blank"><img style="width: 100%; display: block; border: none; max-width: 100%;" src="{[devName:imagen_20221212_093431707]}" alt="Logo y eslogan de la empresa con link a la página web" width="600" /></a></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

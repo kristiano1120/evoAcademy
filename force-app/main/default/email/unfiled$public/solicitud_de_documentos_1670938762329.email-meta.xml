@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la solicitud de documentos a los prospectos que estan en la etapa de contratación</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>solicitud_de_documentos</name>
+    <pageDevName>solicitud_de_documentos</pageDevName>
+    <relatedEntityType>Lead</relatedEntityType>
+    <style>none</style>
+    <subject>Solicitud de documentación</subject>
+    <textOnly>{{{Recipient.Name}}}
+
+¡Te felicitamos! Has completado nuestro proceso de selección y a partir de este momento te damos la bienvenida a e-volution. En este correo te solicitamos información importante para completar tu ingreso a empresa.
+
+ - Hoja de vida
+ - Nombre completo.
+ - N. de cédula y su fotocopia (escaneada)
+ - N. de celular.
+ - N. de teléfono fijo.
+ - Correo electrónico.
+ - Dirección completa (Departamento, Ciudad y Barrio) 
+ - Lugar y fecha de nacimiento.
+ - Nacionalidad.
+ - EPS (Certificado) 
+ - AFP (Certificado)
+ - Caja de compensación 
+ - Certificados académicos
+ - Antecedentes Disciplinarios-Policía.
+ - Antecedentes Fiscales-Contraloría. 
+ - Antecedentes Penales- Procuraduría. 
+ - # Cuenta bancaria / tipo de cuenta / Banco (Certificado) 
+ - Estado civil
+ - ¿Tienes personas a cargo?
+ - ¿Tienes hijos? ¿Cuántos? 
+ - Si tienes carnet de vacunación COVID-19, adjuntarlo de manera escaneada. 
+
+Por último deberás realizarte un examen médico ocupacional. Las indicaciones son las siguientes: EXAMEN MÉDICO OCUPACIONAL CON ÉNFASIS OSTEOMUSCULAR Y EXAMEN VISUAL BASICO. 
+
+Cualquier inquietud la puedes realizar por medio de este correo.
+
+Cordialmente
+
+{{{Sender.Name}}}
+
+{{{Sender.Title}}}
+
+{{{Sender.Email}}}
+
+[Image alt text: Logo y eslogan de la empresa con link a la página web] &lt; https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/ &gt;</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>
