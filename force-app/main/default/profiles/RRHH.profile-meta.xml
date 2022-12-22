@@ -898,7 +898,6 @@
     </objectPermissions>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Lead.Candidato</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
