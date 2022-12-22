@@ -36,6 +36,12 @@
                 <default>false</default>
                 <label>Incompatibilidad con el puesto</label>
             </value>
+            <value>
+                <fullName>Condiciones del Pagare</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Condiciones del Pagare</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
