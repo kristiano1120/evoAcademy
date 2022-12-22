@@ -22,19 +22,19 @@
                 <label>Salario de la oferta</label>
             </value>
             <value>
-                <fullName>Condiciones del Pagare</fullName>
+                <fullName>Condiciones del Pagaré</fullName>
                 <default>false</default>
-                <label>Condiciones del Pagare</label>
-            </value>
-            <value>
-                <fullName>Incompatibilidad con el puesto</fullName>
-                <default>false</default>
-                <label>Incompatibilidad con el puesto</label>
+                <label>Condiciones del Pagaré</label>
             </value>
             <value>
                 <fullName>Otros</fullName>
                 <default>false</default>
                 <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Incompatibilidad con el puesto</fullName>
+                <default>false</default>
+                <label>Incompatibilidad con el puesto</label>
             </value>
         </valueSetDefinition>
     </valueSet>

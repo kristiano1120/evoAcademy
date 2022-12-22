@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Copia_1_de_Recordatorio</name>
-        <label>Copia 1 de Recordatorio</label>
-        <locationX>50</locationX>
+        <name>Copia_1_de_Copia_1_de_Recordatorio</name>
+        <label>Copia 1 de Copia 1 de Recordatorio</label>
+        <locationX>308</locationX>
         <locationY>528</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
@@ -33,61 +33,11 @@
             </value>
         </inputParameters>
     </actionCalls>
-    <actionCalls>
-        <name>Recordatorio</name>
-        <label>Recordatorio</label>
-        <locationX>314</locationX>
-        <locationY>528</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>emailSubject</name>
-            <value>
-                <stringValue>Recordatorio</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailBody</name>
-            <value>
-                <elementReference>Correo_de_entrevista</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailAddressesArray</name>
-            <value>
-                <elementReference>correos</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
     <apiVersion>56.0</apiVersion>
-    <assignments>
-        <name>Copia_1_de_Obtener_correos</name>
-        <label>Copia 1 de Obtener correos</label>
-        <locationX>50</locationX>
-        <locationY>408</locationY>
-        <assignmentItems>
-            <assignToReference>correos</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>$Record.Owner:User.Email</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>correos</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Copia_1_de_Email_candidato.Email</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Copia_1_de_Recordatorio</targetReference>
-        </connector>
-    </assignments>
     <assignments>
         <name>Obtener_correos</name>
         <label>Obtener correos</label>
-        <locationX>314</locationX>
+        <locationX>308</locationX>
         <locationY>408</locationY>
         <assignmentItems>
             <assignToReference>correos</assignToReference>
@@ -104,7 +54,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Recordatorio</targetReference>
+            <targetReference>Copia_1_de_Copia_1_de_Recordatorio</targetReference>
         </connector>
     </assignments>
     <environments>Default</environments>
@@ -130,33 +80,9 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Copia_1_de_Email_candidato</name>
-        <label>Copia 1 de Email candidato</label>
-        <locationX>50</locationX>
-        <locationY>288</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Copia_1_de_Obtener_correos</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>idNombre</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Lead</object>
-        <queriedFields>Id</queriedFields>
-        <queriedFields>Email</queriedFields>
-        <queriedFields>Name</queriedFields>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Email_candidato</name>
         <label>Email candidato</label>
-        <locationX>314</locationX>
+        <locationX>308</locationX>
         <locationY>288</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -178,11 +104,8 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>56</locationX>
+        <locationX>50</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Copia_1_de_Email_candidato</targetReference>
-        </connector>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Subject</field>
@@ -225,7 +148,7 @@
         <description>correo con recordatorio para la entrevista tecnica</description>
         <name>Correo_de_entrevista</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;&lt;img src=&quot;https://media.discordapp.net/attachments/973710581825687582/1054430925427064912/imagen_2022-12-12_094623385.png?width=280&amp;amp;height=54&quot; alt=&quot;imagen_2022-12-12_094623385.png&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Cordial saludo!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Estamos muy contentos por su interés en nuestra empresa, para prepararnos para la entrevista le pedimos que revise su correo&lt;/p&gt;&lt;p&gt;electrónico el día de la entrevista donde le llegara un link para ingresar a la hora indicada a la entrevista, por favor asegurarse de tener una conexión a internet confiable y un dispositivo con cámara web y micrófono con buen funcionamiento.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo de entrevista: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!$Record.Subject}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fecha:&lt;/strong&gt;{!$Record.StartDateTime}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Esperamos tener la oportunidad de conocerlo mejor, si tiene alguna pregunta no dude en ponerse en contacto con nosotros.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Muchas gracias!.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); font-size: var(--lwc-fontSize3,0.8125rem); color: var(--lwc-colorTextWeak,rgb(68, 68, 68)); background-color: var(--lwc-colorBackgroundInput,rgb(255, 255, 255));&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/1054438823133728828/1054438888778764458/imagen_2022-12-12_093431707.png&quot; alt=&quot;imagen_2022-12-12_093431707.png&quot;&gt;&lt;/span&gt;&lt;/p&gt;</text>
+        <text>&lt;p&gt;&lt;img src=&quot;https://media.discordapp.net/attachments/973710581825687582/1054430925427064912/imagen_2022-12-12_094623385.png?width=280&amp;amp;height=54&quot; alt=&quot;imagen_2022-12-12_094623385.png&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Cordial saludo!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Recuerde estar preparado para la entrevista, le pedimos que este pendiente a su correo electrónico, allí encontrará un enlace para ingresar a la hora indicada, por favor asegurarse de tener una conexión a internet estable, un dispositivo con cámara web y micrófono con buen funcionamiento.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo de entrevista: &lt;/strong&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Subject}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fecha:&lt;/strong&gt;{!$Record.StartDateTime}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Esperamos tener la oportunidad de conocerlo mejor, si tiene alguna pregunta no dude en ponerse en contacto con nosotros.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Muchas gracias!.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: var(--lwc-colorBackgroundInput,rgb(255, 255, 255)); color: var(--lwc-colorTextWeak,rgb(68, 68, 68)); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;);&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/1054438823133728828/1054438888778764458/imagen_2022-12-12_093431707.png&quot; alt=&quot;imagen_2022-12-12_093431707.png&quot;&gt;&lt;/span&gt;&lt;/p&gt;</text>
     </textTemplates>
     <variables>
         <name>correos</name>

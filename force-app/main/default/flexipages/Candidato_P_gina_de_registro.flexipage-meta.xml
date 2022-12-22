@@ -7,25 +7,29 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>Lead.Registrar_Entrevista</value>
+                            <value>Lead.Agendar_entrevista</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Lead.Registrar_Informacion</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Lead.Descartar</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.Activo__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>false</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Delete</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>ChangeRecordType</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Submit</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Lead.Agendar_entrevista</value>
+                            <value>Delete</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -43,11 +47,11 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideChatterActions</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>3</value>
+                    <value>5</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>

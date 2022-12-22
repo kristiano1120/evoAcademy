@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>56.0</apiVersion>
+    <choices>
+        <name>CondicionesdelPagare</name>
+        <choiceText>Condiciones del Pagaré</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Condiciones del Pagaré</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Horarioslaborales</name>
+        <choiceText>Horarios laborales</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Horarios laborales</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Incompatibilidadconelpuesto</name>
+        <choiceText>Incompatibilidad con el puesto</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Incompatibilidad con el puesto</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Otro</name>
+        <choiceText>Otro</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Otro</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Salariodelaoferta</name>
+        <choiceText>Salario de la oferta</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Salario de la oferta</stringValue>
+        </value>
+    </choices>
     <dynamicChoiceSets>
         <name>Motivos</name>
         <dataType>Picklist</dataType>
@@ -74,12 +114,6 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Activo__c</field>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Motivo_de_descarte__c</field>
             <value>
                 <elementReference>Motivo_de_descarte</elementReference>
@@ -117,7 +151,11 @@
         </fields>
         <fields>
             <name>Motivo_de_descarte</name>
-            <choiceReferences>motivos2</choiceReferences>
+            <choiceReferences>Incompatibilidadconelpuesto</choiceReferences>
+            <choiceReferences>Horarioslaborales</choiceReferences>
+            <choiceReferences>Salariodelaoferta</choiceReferences>
+            <choiceReferences>CondicionesdelPagare</choiceReferences>
+            <choiceReferences>Otro</choiceReferences>
             <dataType>String</dataType>
             <fieldText>Motivo de descarte</fieldText>
             <fieldType>DropdownBox</fieldType>

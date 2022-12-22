@@ -116,9 +116,9 @@
         <label>Entrevista</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Evento_de_entrevista</targetReference>
         </connector>
@@ -138,6 +138,10 @@
             <fieldText>Fecha y hora de inicio</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;El evento no puede durar más de 14 días &lt;/p&gt;</errorMessage>
+                <formulaExpression>IF(({!Fecha_y_hora_de_inicio}+336) &lt; ({!Fecha_y_hora_de_fin}), true, false)</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Fecha_y_hora_de_fin</name>
@@ -145,6 +149,10 @@
             <fieldText>Fecha y hora de fin</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;La Fecha y hora de fin no puede ser menor a la Fecha y hora de inicio&lt;/p&gt;</errorMessage>
+                <formulaExpression>IF(({!Fecha_y_hora_de_fin} &lt; {!Fecha_y_hora_de_inicio} ), false, true)</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Candidat</name>
@@ -216,6 +224,7 @@
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
+        <nextOrFinishButtonLabel>Crear evento</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -226,7 +235,7 @@
             <targetReference>candidato</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

@@ -4449,7 +4449,7 @@
     <picklistValues>
         <picklist>Motivo_de_descarte__c</picklist>
         <values>
-            <fullName>Condiciones del Pagare</fullName>
+            <fullName>Condiciones del Pagaré</fullName>
             <default>false</default>
         </values>
         <values>

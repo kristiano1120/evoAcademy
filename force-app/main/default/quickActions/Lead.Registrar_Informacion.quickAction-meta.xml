@@ -2,7 +2,7 @@
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Acción para registrar el Feedback de cada entrevista</description>
     <flowDefinition>Registrar_Entrevista</flowDefinition>
-    <label>Registrar Entrevista</label>
+    <label>Registrar Informacion</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>Flow</type>
 </QuickAction>

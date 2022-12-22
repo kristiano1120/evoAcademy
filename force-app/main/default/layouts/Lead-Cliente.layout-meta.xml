@@ -155,6 +155,10 @@
                 <behavior>Edit</behavior>
                 <field>inicio_de_funciones__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Address</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

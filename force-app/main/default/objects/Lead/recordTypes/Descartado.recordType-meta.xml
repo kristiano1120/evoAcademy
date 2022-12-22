@@ -3,6 +3,7 @@
     <fullName>Descartado</fullName>
     <active>true</active>
     <businessProcess>Descartado</businessProcess>
+    <compactLayoutAssignment>Formato_compacto_candidato</compactLayoutAssignment>
     <description>Tipo de registro dedicado a las personas o empresas que han sido descartadas de su proceso</description>
     <label>Descartado</label>
     <picklistValues>
@@ -4449,11 +4450,15 @@
     <picklistValues>
         <picklist>Motivo_de_descarte__c</picklist>
         <values>
-            <fullName>Condiciones del Pagare</fullName>
+            <fullName>Condiciones del Pagaré</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Horarios laborales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incompatibilidad con el puesto</fullName>
             <default>false</default>
         </values>
         <values>

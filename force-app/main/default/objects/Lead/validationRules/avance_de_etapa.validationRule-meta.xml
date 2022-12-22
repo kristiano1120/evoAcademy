@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>avance_de_etapa</fullName>
+    <active>false</active>
+    <description>Valida que ciertos campos contengan informacion si se desea avanzar de etapa</description>
+    <errorConditionFormula>OR(
+ IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Prueba presentada&quot;) &amp;&amp;  ISPICKVAL(Status,&quot;Cualificación psicotécnica&quot;)  &amp;&amp;  Aprobo__c = false  , True, False) ,
+
+ IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Cualificación psicotécnica&quot;) &amp;&amp;  ISPICKVAL(Status,&quot;Cualificación técnica&quot;)  &amp;&amp;  ISPICKVAL( Calificacion_Psicotecnica__c , &quot;&quot;) , True, False) ,
+
+ IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Cualificación técnica&quot;) &amp;&amp;  ISPICKVAL(Status,&quot;Cultivación&quot;)  &amp;&amp;  ISPICKVAL(  Calificacion_Tecnica__c  , &quot;&quot;) , True, False),
+
+ IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Cultivación&quot;) &amp;&amp;  ISPICKVAL(Status,&quot;Contratación&quot;)  &amp;&amp;  ISPICKVAL(   Acepta_terminos_y_condiciones__c   , &quot;&quot;) , True, False)
+)</errorConditionFormula>
+    <errorMessage>Le hace falta registrar informacion importante para avanzar a la siguiente etapa</errorMessage>
+</ValidationRule>

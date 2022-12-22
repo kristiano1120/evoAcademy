@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validar_para_avanzar_a_contratacion</fullName>
+    <active>true</active>
+    <description>Valida que avanzar a la etapa de contratación debe haber aceptado los términos y condiciones en la etapa de cultivación</description>
+    <errorConditionFormula>IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Cultivación&quot;) &amp;&amp; ISPICKVAL(Status,&quot;Contratación&quot;) &amp;&amp; ISPICKVAL( Acepta_terminos_y_condiciones__c , &quot;&quot;) , True, False)</errorConditionFormula>
+    <errorDisplayField>Acepta_terminos_y_condiciones__c</errorDisplayField>
+    <errorMessage>Para avanzar a la etapa contratación es necesario haber aceptado los términos y condiciones durante la entrevista técnica. Puede ingresar esta información desde el botón &quot;Registrar información&quot;</errorMessage>
+</ValidationRule>
