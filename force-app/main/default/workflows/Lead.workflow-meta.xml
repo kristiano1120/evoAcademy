@@ -8,7 +8,7 @@
             <field>Email</field>
             <type>email</type>
         </recipients>
-        <senderAddress>kristiano1120@academy.com</senderAddress>
+        <senderAddress>academyevolution2022@gmail.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>PlantillasEvolution/Carta_Agradecimiento_Descarte_1670854667817</template>
     </alerts>
@@ -24,19 +24,8 @@
             <recipient>academyevolution@evolution.com</recipient>
             <type>user</type>
         </recipients>
-        <senderAddress>kristiano1120@academy.com</senderAddress>
+        <senderAddress>academyevolution2022@gmail.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/Carta_Agradecimiento_Descarte</template>
-    </alerts>
-    <alerts>
-        <fullName>enviar_test_gorilla</fullName>
-        <description>enviar test gorilla</description>
-        <protected>false</protected>
-        <recipients>
-            <field>Email</field>
-            <type>email</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/invitacion_test_gorilla_1670858965334</template>
     </alerts>
 </Workflow>
