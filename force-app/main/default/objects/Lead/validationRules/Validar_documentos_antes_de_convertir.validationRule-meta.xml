@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_documentos_antes_de_convertir</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( ISPICKVAL(  PRIORVALUE(Status), &quot;Contratación&quot;) &amp;&amp; NOT(Documentos_faltantes1__c = null) &amp;&amp;  IsConverted  = true,  True, False)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>No puede convertir un candidato sin antes haber adjuntado toda la documentación.</errorMessage>
+</ValidationRule>
