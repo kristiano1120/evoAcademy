@@ -9,7 +9,7 @@ public with sharing class CandidatoTriggerHandlerTest {
         Carne_de_vacunas_COVID_19__c = true);
         insert candidato;
     }
-	
+	//Probando
     //Se verifica que el campo de documentos faltantes esté nulo, ya que todas las casillas están marcadas
     @isTest
     public static void documentacionCompleta(){
