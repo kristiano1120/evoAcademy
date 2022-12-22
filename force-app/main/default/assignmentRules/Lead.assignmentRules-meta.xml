@@ -45,7 +45,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>caroacademy@evolution.com</assignedTo>
+            <assignedTo>andavidoc@academy.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
