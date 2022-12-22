@@ -36,7 +36,7 @@
         <fullName>Standard</fullName>
         <active>false</active>
         <ruleEntry>
-            <assignedTo>academyevolution@evolution.com</assignedTo>
+            <assignedTo>caroacademy@evolution.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
@@ -45,7 +45,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>academyevolution@evolution.com</assignedTo>
+            <assignedTo>andavidoc@academy.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
