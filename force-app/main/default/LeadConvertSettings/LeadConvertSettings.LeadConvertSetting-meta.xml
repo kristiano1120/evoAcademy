@@ -124,34 +124,6 @@
             <outputField>Nivel_actual__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Nivel_de_escolaridad__c</inputField>
-            <outputField>Nivel_de_escolaridad__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nivel_de_ingl_s__c</inputField>
-            <outputField>Nivel_de_ingles__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nombre_de_la_empresa__c</inputField>
-            <outputField>Nombre_de_la_empresa__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Numero_de_Identificacion__c</inputField>
-            <outputField>Numero_de_Identificacion__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Fecha_de_finalizaci_n2__c</inputField>
-            <outputField>Fecha_de_finalizacion2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Fecha_de_inicio2__c</inputField>
-            <outputField>Fecha_de_inicio2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Cargo2__c</inputField>
-            <outputField>Cargo2__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Jefe_inmediato2__c</inputField>
             <outputField>Jefe_inmediato2__c</outputField>
         </mappingFields>
@@ -182,6 +154,34 @@
         <mappingFields>
             <inputField>Acepta_terminos_y_condiciones__c</inputField>
             <outputField>Acepta_terminos_y_condiciones__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Cargo2__c</inputField>
+            <outputField>Cargo2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nivel_de_escolaridad__c</inputField>
+            <outputField>Nivel_de_escolaridad__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nivel_de_ingl_s__c</inputField>
+            <outputField>Nivel_de_ingles__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nombre_de_la_empresa__c</inputField>
+            <outputField>Nombre_de_la_empresa__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Numero_de_Identificacion__c</inputField>
+            <outputField>Numero_de_Identificacion__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Fecha_de_finalizaci_n2__c</inputField>
+            <outputField>Fecha_de_finalizacion2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Fecha_de_inicio2__c</inputField>
+            <outputField>Fecha_de_inicio2__c</outputField>
         </mappingFields>
         <outputObject>Contact</outputObject>
     </objectMapping>

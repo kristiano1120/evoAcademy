@@ -134,6 +134,10 @@
     </validationRules>
     <validationRules>
         <errorMessage></errorMessage>
+        <name>Validar_documentos_antes_de_convertir</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
         <name>avance_de_etapa</name>
     </validationRules>
     <validationRules>
