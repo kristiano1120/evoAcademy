@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Cualificación psicotécnica</fullName>
+        <default>false</default>
+        <label>Cualificación psicotécnica</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cualificación técnica</fullName>
+        <default>false</default>
+        <label>Cualificación técnica</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Términos y condiciones</fullName>
+        <default>false</default>
+        <label>Términos y condiciones</label>
+    </standardValue>
+</StandardValueSet>

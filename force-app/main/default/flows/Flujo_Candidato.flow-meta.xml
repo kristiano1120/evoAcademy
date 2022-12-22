@@ -102,7 +102,7 @@
                 <leftValueReference>$Record.RecordTypeId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn0000005rYgIAI</stringValue>
+                    <stringValue>012Dn000000MLT5IAO</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -132,14 +132,14 @@
                 <leftValueReference>$Record__Prior.RecordType.Id</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn0000005rp5IAA</stringValue>
+                    <stringValue>012Dn000000MLTqIAO</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.RecordType.Id</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn0000005rp5IAA</stringValue>
+                    <stringValue>012Dn000000MLTqIAO</stringValue>
                 </rightValue>
             </conditions>
             <conditions>

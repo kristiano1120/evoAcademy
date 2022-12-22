@@ -4,7 +4,6 @@
     <description>correo electrónico con mensaje de agradecimiento de participación en el proceso para informar al candidato que no continua en el proceso de seleccion</description>
     <encodingKey>UTF-8</encodingKey>
     <name>Carta Agradecimiento Descarte</name>
-    <pageDevName>Carta_Agradecimiento_Descarte</pageDevName>
     <relatedEntityType>Lead</relatedEntityType>
     <style>none</style>
     <subject>Carta de agradecimiento</subject>

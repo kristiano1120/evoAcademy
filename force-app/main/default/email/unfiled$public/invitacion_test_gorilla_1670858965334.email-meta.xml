@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la invitación a realizar el test gorilla</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>instrucciones_test_gorilla</name>
+    <relatedEntityType>Lead</relatedEntityType>
+    <style>none</style>
+    <subject>Proceso de Selección Consultoría en Salesforce</subject>
+    <textOnly>&lt; https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/ &gt; Hola {{{Recipient.Name}}}!
+
+Desde e-volution queremos contarte que comenzamos con el proceso de selección para la oferta laboral Consultoría en Salesforce, la cual aplicaste previamente .Tu candidatura sigue avanzando, para ello es indispensable ingresar al siguiente link para responder la prueba la cual corresponde a la fase inicial del proceso. 
+
+Link de acceso: https://assessment.testgorilla.com/testtaker/publicinvitation/22146c20-1f1b-46ec-b340-15fe75f722d0 &lt; https://assessment.testgorilla.com/testtaker/publicinvitation/22146c20-1f1b-46ec-b340-15fe75f722d0 &gt; 
+
+Si presentas inconveniente en el test con la configuración del idioma te sale en inglés y la quieres en español , te dejo adjunto un instructivo donde aprenderás a modificarlo. 
+
+Cualquier duda que se presente puedes realizarla por este mismo medio. 
+
+{{{Sender.Name}}} 
+
+{{{Sender.Title}}} 
+
+ &lt; https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/ &gt;</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

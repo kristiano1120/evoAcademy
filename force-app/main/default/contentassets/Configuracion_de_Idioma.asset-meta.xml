@@ -3,6 +3,12 @@
     <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
     <language>en_US</language>
     <masterLabel>Configuracion_de_Idioma</masterLabel>
+    <relationships>
+        <emailTemplate>
+            <access>VIEWER</access>
+            <name>unfiled$public/invitacion_test_gorilla_1670858965334</name>
+        </emailTemplate>
+    </relationships>
     <versions>
         <version>
             <number>1</number>
