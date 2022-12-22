@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Examen_medico__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Valida que se adjunto el examen medico</description>
+    <externalId>false</externalId>
+    <label>Examen médico</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

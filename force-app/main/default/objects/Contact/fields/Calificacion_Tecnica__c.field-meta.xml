@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calificacion_Tecnica__c</fullName>
+    <description>Calificacion que se da durante la entrevista tecnica</description>
+    <externalId>false</externalId>
+    <label>Calificacion Tecnica</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Nivel</valueSetName>
+    </valueSet>
+</CustomField>

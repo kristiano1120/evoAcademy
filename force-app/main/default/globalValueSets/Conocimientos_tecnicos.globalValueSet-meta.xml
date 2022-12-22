@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Java</fullName>
+        <default>false</default>
+        <label>Java</label>
+    </customValue>
+    <customValue>
+        <fullName>Python</fullName>
+        <default>false</default>
+        <label>Python</label>
+    </customValue>
+    <customValue>
+        <fullName>Javascript</fullName>
+        <default>false</default>
+        <label>Javascript</label>
+    </customValue>
+    <customValue>
+        <fullName>C#</fullName>
+        <default>false</default>
+        <label>C#</label>
+    </customValue>
+    <customValue>
+        <fullName>C++</fullName>
+        <default>false</default>
+        <label>C++</label>
+    </customValue>
+    <customValue>
+        <fullName>PHP</fullName>
+        <default>false</default>
+        <label>PHP</label>
+    </customValue>
+    <customValue>
+        <fullName>React</fullName>
+        <default>false</default>
+        <label>React</label>
+    </customValue>
+    <customValue>
+        <fullName>HTML</fullName>
+        <default>false</default>
+        <label>HTML</label>
+    </customValue>
+    <customValue>
+        <fullName>CSS</fullName>
+        <default>false</default>
+        <label>CSS</label>
+    </customValue>
+    <customValue>
+        <fullName>SQL</fullName>
+        <default>false</default>
+        <label>SQL</label>
+    </customValue>
+    <description>Conocimientos tecnicos que se tienen en cuenta para los prospectos y contactos</description>
+    <masterLabel>Conocimientos tecnicos</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

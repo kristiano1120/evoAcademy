@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificado_bancario__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Valida si ya se adjunto el certificado bancario</description>
+    <externalId>false</externalId>
+    <label>Certificado bancario</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conocimientos_tecnicos__c</fullName>
+    <description>Lista de conocimientos tecnicos con los que cuenta el contacto</description>
+    <externalId>false</externalId>
+    <label>Conocimientos técnicos</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Conocimientos_tecnicos</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

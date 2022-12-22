@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Titulo_al_que_aspira__c</fullName>
+    <description>Nombre del titulo que se encuentra cursando</description>
+    <externalId>false</externalId>
+    <label>Título al que aspira</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

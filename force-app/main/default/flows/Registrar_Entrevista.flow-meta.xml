@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <description>Valida el estado en el que se encuentra el candidato para determinar que tipo de entrevista mostrar en pantalla</description>
+        <name>Estado_del_Candidato</name>
+        <label>Estado del Candidato</label>
+        <locationX>1634</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Entrevista_en_etapa_erronea</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Tecnica</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cualificación técnica</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ya_hay_una_entrevista_registrada</targetReference>
+            </connector>
+            <label>Tecnica</label>
+        </rules>
+        <rules>
+            <name>Psicotecnica</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cualificación psicotécnica</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ya_tiene_una_entrevista_psicotenica</targetReference>
+            </connector>
+            <label>Psicotecnica</label>
+        </rules>
+        <rules>
+            <name>Cultivacion</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cultivación</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Registrar_terminos_y_condiciones</targetReference>
+            </connector>
+            <label>Cultivacion</label>
+        </rules>
+        <rules>
+            <name>Preseleccion</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Preselección</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contacto_candidato</targetReference>
+            </connector>
+            <label>Preselección</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision para cuando ya hay una entrevista registrada y si debe modificarla o se ingreso por error.</description>
+        <name>Ya_hay_una_entrevista_registrada</name>
+        <label>Ya hay una entrevista registrada?</label>
+        <locationX>314</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Registrar_Entrevista_Tecnica</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Si_hay_entrevista_tecnica_registrada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Calificacion_Tecnica__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Feedback_Entrevista_Tecnica__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Entrevista_tecnica_ya_Existe</targetReference>
+            </connector>
+            <label>Si hay entrevista tecnica registrada</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ya_tiene_una_entrevista_psicotenica</name>
+        <label>ya tiene una entrevista psicotenica?</label>
+        <locationX>1370</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Registrar_Entrevista_Psicot_cnica</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>nuevo_registro</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Calificacion_Psicotecnica__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Feedback_Entrevista_Psicot_cnica__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Registrar_entrevistapsico</targetReference>
+            </connector>
+            <label>nuevo registro</label>
+        </rules>
+    </decisions>
+    <description>Flujo de pantalla para registrar las entrevistas</description>
+    <dynamicChoiceSets>
+        <name>valoresdecalificacion</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Calificacion_Tecnica__c</picklistField>
+        <picklistObject>Lead</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <description>Valores de la lista de seleccion acepta terminos y condiciones</description>
+        <name>ValoresTerminosCondiciones</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Acepta_terminos_y_condiciones__c</picklistField>
+        <picklistObject>Lead</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Registrar Entrevista {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Registrar Entrevista</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Obtener_Candidato</name>
+        <label>Obtener Candidato</label>
+        <locationX>1634</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Estado_del_Candidato</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordRollbacks>
+        <description>Revierte los cambios por el fallo al actualizar el registro</description>
+        <name>Fallo_al_Actualizar</name>
+        <label>Fallo al Actualizar</label>
+        <locationX>314</locationX>
+        <locationY>998</locationY>
+    </recordRollbacks>
+    <recordUpdates>
+        <description>Actualiza el registro del candidato con la calificacion y el feedback de la entrevista tecnica</description>
+        <name>Actualizar_Candidato_Entrevista_Tecnica</name>
+        <label>Actualizar Candidato Entrevista Tecnica</label>
+        <locationX>578</locationX>
+        <locationY>638</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Calificacion_Tecnica__c</field>
+            <value>
+                <elementReference>Valor_CalificacionTecnica</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Entrevista_Tecnica__c</field>
+            <value>
+                <elementReference>Feedback_tecnico</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>se actualiza la entrevista psicotécnica del candidato</description>
+        <name>Actualizar_Entrevista_Psicotecnica</name>
+        <label>Actualizar Entrevista Psicotecnica</label>
+        <locationX>1634</locationX>
+        <locationY>638</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Calificacion_Psicotecnica__c</field>
+            <value>
+                <elementReference>valor_calificacionpsico</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Entrevista_Psicot_cnica__c</field>
+            <value>
+                <elementReference>Feedback_psicotecnico</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualiza el registro del candidato con la calificacion y el feedback de la entrevista tecnica</description>
+        <name>Copia_1_de_Actualizar_Candidato_Entrevista_Tecnica</name>
+        <label>Copia 1 de Actualizar Candidato Entrevista Tecnica</label>
+        <locationX>50</locationX>
+        <locationY>758</locationY>
+        <faultConnector>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Calificacion_Tecnica__c</field>
+            <value>
+                <elementReference>Copia_1_de_Valor_CalificacionTecnica</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Entrevista_Tecnica__c</field>
+            <value>
+                <elementReference>Copia_1_de_Feedback_tecnico</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>se actualiza la entrevista psicotécnica del candidato</description>
+        <name>Copia_1_de_Actualizar_Entrevista_Psicotecnica</name>
+        <label>Copia 1 de Actualizar Entrevista Psicotecnica</label>
+        <locationX>1106</locationX>
+        <locationY>758</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Calificacion_Psicotecnica__c</field>
+            <value>
+                <elementReference>valor_calificacionpsico</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Entrevista_Psicot_cnica__c</field>
+            <value>
+                <elementReference>Feedback_psicotecnico</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualiza el registro del candidato con la informacion recolectada durante la informacion de terminos y condiciones</description>
+        <name>Registrar_aceptar_TyC</name>
+        <label>Registrar aceptar TyC</label>
+        <locationX>2162</locationX>
+        <locationY>518</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Acepta_terminos_y_condiciones__c</field>
+            <value>
+                <elementReference>Acepta_Terminos_y_Condiciones</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Terminos_y_Condiciones__c</field>
+            <value>
+                <elementReference>Feedback_de_Terminos_y_condiciones</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <screens>
+        <name>Actualizacion_fallo</name>
+        <label>Actualizacion fallo</label>
+        <locationX>314</locationX>
+        <locationY>878</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Fallo_al_Actualizar</targetReference>
+        </connector>
+        <fields>
+            <name>MensajeDeError</name>
+            <fieldText>&lt;p&gt;Se ha producido un error al intentar actualizar el registro, comuníquese con su administrador.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Contacto_candidato</name>
+        <label>Contacto candidato</label>
+        <locationX>2690</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>primer_contacto</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Aclaraciones pertinentes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;1.Cláusula de permanencia. &lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 12px;&quot;&gt;Firmarán un contrato de trabajo que incluye salario desde el primer mes, y un compromiso mínimo de trabajo de 3 años asegurados como un recurso valioso de tecnología en E-volution y su departamento de consultoría Salesforce&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 12px;&quot;&gt;Deberán pagar el total de la capacitación incluida en el contrato, si desean renunciar o cancelar el vínculo laboral que tienen con E-volution antes de los 3 años iniciales del contrato.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;2. Modalidad 100% presencial.&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Las labores del cargo serán llevadas a cabo en el municipio de Envigado&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;3.Salario durante y después del entrenamiento:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Durante el período de entrenamiento devengarán un Salario Mínimo Mensual Legal Vigente(SMMLV)&lt;/li&gt;&lt;li&gt;Una vez certificados como Administradores y Desarrolladores el salario se establecerá de acuerdo al rendimiento durante el entrenamiento&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;4.Horario y compromisos:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Al firmarse un contrato laboral deberán asumirse con la debida diligencia las responsabilidades específicas del cargo&lt;/li&gt;&lt;li&gt;Se cumplirá horario laboral de Lunes a Viernes de 11 a.m a 8 p.m&lt;/li&gt;&lt;/ul&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Copia_1_de_Registrar_Entrevista_Psicot_cnica</name>
+        <label>Copia 1 de Registrar Entrevista Psicotécnica</label>
+        <locationX>1106</locationX>
+        <locationY>638</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Copia_1_de_Actualizar_Entrevista_Psicotecnica</targetReference>
+        </connector>
+        <fields>
+            <name>Copia_1_de_entrevistapsico</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Registrar Entrevista psicotécnica &lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Copia_1_de_valor_calificacionpsico</name>
+            <choiceReferences>valoresdecalificacion</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Obtener_Candidato.Calificacion_Psicotecnica__c</elementReference>
+            </defaultValue>
+            <fieldText>Calificación Psicotécnica</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Copia_1_de_Feedback_psicotecnico</name>
+            <defaultValue>
+                <stringValue>{!Obtener_Candidato.Feedback_Entrevista_Psicot_cnica__c}</stringValue>
+            </defaultValue>
+            <fieldText>Feedback Psicotecnico</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Copia_1_de_Registrar_Entrevista_Tecnica</name>
+        <label>Copia 1 de Registrar Entrevista Tecnica</label>
+        <locationX>50</locationX>
+        <locationY>638</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Copia_1_de_Actualizar_Candidato_Entrevista_Tecnica</targetReference>
+        </connector>
+        <fields>
+            <name>Copia_1_de_titulotecnico</name>
+            <fieldText>&lt;p&gt;Registrar Entrevista Tecnica&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Copia_1_de_Valor_CalificacionTecnica</name>
+            <choiceReferences>valoresdecalificacion</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Obtener_Candidato.Calificacion_Tecnica__c</elementReference>
+            </defaultValue>
+            <fieldText>Calificacion Tecnica</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Copia_1_de_Feedback_tecnico</name>
+            <defaultValue>
+                <stringValue>{!Obtener_Candidato.Feedback_Entrevista_Tecnica__c}</stringValue>
+            </defaultValue>
+            <fieldText>Feedback tecnico</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;ha superado el limite de 500 caracteres.&lt;/p&gt;</errorMessage>
+                <formulaExpression>LEN({!Copia_1_de_Feedback_tecnico}) &lt; 500</formulaExpression>
+            </validationRule>
+        </fields>
+        <nextOrFinishButtonLabel>Registrar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Entrevista_en_etapa_erronea</name>
+        <label>Entrevista en etapa erronea</label>
+        <locationX>2954</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>etapaErronea</name>
+            <fieldText>&lt;p&gt;La etapa en la que se encuentra el candidato no cuenta con un proceso de entrevista el cual registrar.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Entrevista_tecnica_ya_Existe</name>
+        <label>Entrevista tecnica ya Existe</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Salir</backButtonLabel>
+        <connector>
+            <targetReference>Copia_1_de_Registrar_Entrevista_Tecnica</targetReference>
+        </connector>
+        <fields>
+            <name>YaHayEntrevistaTecnica</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;La entrevista tecnica ya se encuentra registrada con la siguiente informacion.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>CalificacionTecnicaExistente</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Calificacion Tecnica:&lt;/strong&gt; {!Obtener_Candidato.Calificacion_Tecnica__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>FeedbackTecnicoExistente</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Feedback Entrevista Tecnica:&lt;/strong&gt; {!Obtener_Candidato.Feedback_Entrevista_Tecnica__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Mensaje2EntrevistaTecnica</name>
+            <fieldText>&lt;p&gt;Desea modificar el registro de la entrevista?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Modificar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Registrar_Entrevista_Psicot_cnica</name>
+        <label>Registrar Entrevista Psicotécnica</label>
+        <locationX>1634</locationX>
+        <locationY>518</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Actualizar_Entrevista_Psicotecnica</targetReference>
+        </connector>
+        <fields>
+            <name>entrevistapsico</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Registrar Entrevista psicotécnica &lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>valor_calificacionpsico</name>
+            <choiceReferences>valoresdecalificacion</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Calificación Psicotécnica</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Feedback_psicotecnico</name>
+            <fieldText>Feedback Psicotecnico</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Registrar_Entrevista_Tecnica</name>
+        <label>Registrar Entrevista Tecnica</label>
+        <locationX>578</locationX>
+        <locationY>518</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Actualizar_Candidato_Entrevista_Tecnica</targetReference>
+        </connector>
+        <fields>
+            <name>titulotecnico</name>
+            <fieldText>&lt;p&gt;Registrar Entrevista Tecnica&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Valor_CalificacionTecnica</name>
+            <choiceReferences>valoresdecalificacion</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Calificacion Tecnica</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Feedback_tecnico</name>
+            <fieldText>Feedback tecnico</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;ha superado el limite de 500 caracteres.&lt;/p&gt;</errorMessage>
+                <formulaExpression>LEN({!Feedback_tecnico}) &lt; 500</formulaExpression>
+            </validationRule>
+        </fields>
+        <nextOrFinishButtonLabel>Registrar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Registrar_entrevistapsico</name>
+        <label>Registrar entrevistapsico</label>
+        <locationX>1106</locationX>
+        <locationY>518</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Regresar</backButtonLabel>
+        <connector>
+            <targetReference>Copia_1_de_Registrar_Entrevista_Psicot_cnica</targetReference>
+        </connector>
+        <fields>
+            <name>YaHayEntrevistaPsicotecnica</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(68, 68, 68);&quot;&gt;La entrevista psicotécnica ya se encuentra registrada con la siguiente información.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>resultadocalificacionpsico</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 13px; background-color: var(--lwc-colorBackgroundInput,rgb(255, 255, 255));&quot;&gt;Calificación&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; &lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 13px;&quot;&gt;Psicotécnica&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;:&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; {!Obtener_Candidato.Calificacion_Psicotecnica__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>feedbackyaexiste</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Feedback Entrevista &lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 13px;&quot;&gt;Psicotécnica&lt;/strong&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;:&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; {!Obtener_Candidato.Feedback_Entrevista_Psicot_cnica__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>decidirnuevoregistro</name>
+            <fieldText>&lt;p&gt;Desea modificar el registro?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Modificar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Pantalla dedicada a enseñar la informacion de los terminos y condiciones, ademas de permitir registrar la respuesta</description>
+        <name>Registrar_terminos_y_condiciones</name>
+        <label>Registrar terminos y condiciones</label>
+        <locationX>2162</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Registrar_aceptar_TyC</targetReference>
+        </connector>
+        <fields>
+            <name>TextoTerminosCondiciones</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Generalidades del contrato&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Temas importantes&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Duración indefinida&lt;/li&gt;&lt;li&gt;El período de prueba será de dos (2) meses&lt;/li&gt;&lt;li&gt;Salario:&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;Durante el entrenamiento salario mínimo (3-4 meses)&lt;ol&gt;&lt;li&gt;Recién graduados salario mínimo&lt;/li&gt;&lt;li&gt;Recién graduados y certificados (admin y dev) 2M - 3M según calificación (18 meses)&lt;/li&gt;&lt;li&gt;Salario a partir de los 18 meses se revisa la experiencia y actitud&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Documentos a firmar&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Contrato&lt;/li&gt;&lt;li&gt;Anexo No. 1 Funciones especiales de EL TRABAJADOR&lt;/li&gt;&lt;li&gt;Anexo No. 2 Entrega de Dineros no Constitutivos de Salario&lt;/li&gt;&lt;li&gt;Anexo No. 3 CONTRATO DE CESIÓN DE INFORMACIÓN PROPIETARIA E INVENTOS&lt;/li&gt;&lt;li&gt;Anexo No. 4 LISTA DE INVENTOS PREVIOS Y OBRAS DE AUTORÍA ORIGINAL&lt;/li&gt;&lt;li&gt;Anexo No. 5 PAUTAS PARA CONFLICTOS DE INTERÉS&lt;/li&gt;&lt;li&gt;Anexo No. 6 VERIFICACIÓN DE ANTECEDENTES.&lt;/li&gt;&lt;li&gt;Anexo No. 7 ENTRENAMIENTO Y CLÁUSULA DE PERMANENCIA&lt;/li&gt;&lt;li&gt;PAGARÉ No. 1&lt;/li&gt;&lt;li&gt;CARTA DE INSTRUCCIONES DEL PAGARÉ No. 1 CON ESPACIOS EN BLANCO.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;¿Por qué esto?&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Anexo No. 7 ENTRENAMIENTO Y CLÁUSULA DE PERMANENCIA&lt;/li&gt;&lt;li&gt;PAGARÉ No. 1&lt;/li&gt;&lt;li&gt;CARTA DE INSTRUCCIONES DEL PAGARÉ No. 1 CON ESPACIOS EN BLANCO.&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;El tipo de entrenamiento que realizaremos tiene costos en el mercado por encima de los USD 15.000.&lt;/li&gt;&lt;li&gt;El valor que cobramos a empresas por entrenar sus recursos es de USD 15.000 y para efectos de este contrato este será el valor a firmar en el pagaré&lt;/li&gt;&lt;li&gt;El empleado solo debe reembolsar este valor si una vez certificado renuncia sin justa causa o es despedido con justa causa, antes de cumplir la permanencia de los 3 años&lt;/li&gt;&lt;li&gt;Lo que buscamos es la permanencia de los empleados a quienes entrenamos para poder amortizar el valor invertido en ellos.&lt;/li&gt;&lt;li&gt;Si el empleado se retira en menos de 3 años deberá reembolsar el valor por amortizar del valor invertido en su capacitación&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Costos de entrenamiento en el mercado&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Essentials for New Lightning Experience Administrators(ADX201): $4,500(USD)&lt;/li&gt;&lt;li&gt;Essentials for New Lightning Experience Administrators(ADX201): $2,250(USD)&lt;/li&gt;&lt;li&gt;Essentials for New Lightning Experience Administrators(ADX201): $3,500(USD)&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;&lt;em&gt;¡Gracias!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Acepta_Terminos_y_Condiciones</name>
+            <choiceReferences>ValoresTerminosCondiciones</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Acepta Terminos y Condiciones?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Feedback_de_Terminos_y_condiciones</name>
+            <fieldText>Feedback de Terminos y condiciones</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Acepta_Terminos_y_Condiciones</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>NO</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <nextOrFinishButtonLabel>Registrar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>1508</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Obtener_Candidato</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

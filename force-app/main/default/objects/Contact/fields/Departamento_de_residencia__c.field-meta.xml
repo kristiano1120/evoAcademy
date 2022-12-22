@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Departamento_de_residencia__c</fullName>
+    <description>Lista de departamentos de colombia</description>
+    <externalId>false</externalId>
+    <label>Departamento de residencia</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Departamento</valueSetName>
+    </valueSet>
+</CustomField>

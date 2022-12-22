@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificado_contraloria__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Valida si ya adjunto el certificado de la contraloria</description>
+    <externalId>false</externalId>
+    <label>Certificado contraloria</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

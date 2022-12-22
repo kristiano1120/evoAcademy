@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificados_academicos__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Valida si ya se adjuntaron los certificados academicos</description>
+    <externalId>false</externalId>
+    <label>Certificados académicos</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
