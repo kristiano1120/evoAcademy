@@ -140,7 +140,7 @@
             <isRequired>true</isRequired>
             <validationRule>
                 <errorMessage>&lt;p&gt;El evento no puede durar más de 14 días &lt;/p&gt;</errorMessage>
-                <formulaExpression>IF(({!Fecha_y_hora_de_inicio}+336) &lt; ({!Fecha_y_hora_de_fin}), true, false)</formulaExpression>
+                <formulaExpression>IF(({!Fecha_y_hora_de_fin}-{!Fecha_y_hora_de_inicio}) &gt; 14 , false, true)</formulaExpression>
             </validationRule>
         </fields>
         <fields>
@@ -235,7 +235,7 @@
             <targetReference>candidato</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

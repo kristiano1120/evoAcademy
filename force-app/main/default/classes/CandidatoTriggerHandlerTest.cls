@@ -9,7 +9,7 @@ public with sharing class CandidatoTriggerHandlerTest {
         Carne_de_vacunas_COVID_19__c = true);
         insert candidato;
     }
-	//Probando
+	
     //Se verifica que el campo de documentos faltantes esté nulo, ya que todas las casillas están marcadas
     @isTest
     public static void documentacionCompleta(){
@@ -57,7 +57,7 @@ public with sharing class CandidatoTriggerHandlerTest {
 
         System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado policía'));
         
-        System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado de vacúna COVID 19'));
+        System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado de vacuna COVID 19'));
 		
     }
 	
@@ -95,7 +95,7 @@ public with sharing class CandidatoTriggerHandlerTest {
 
         System.assert(candidato.Documentos_faltantes1__c.contains('Certificado policía'));
         
-        System.assert(candidato.Documentos_faltantes1__c.contains('Certificado de vacúna COVID 19'));
+        System.assert(candidato.Documentos_faltantes1__c.contains('Certificado de vacuna COVID 19'));
         
         delete candidato;
         undelete candidato;

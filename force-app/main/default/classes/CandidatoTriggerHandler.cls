@@ -69,7 +69,7 @@ public with sharing class CandidatoTriggerHandler implements TriggerHandler{
                 c.Documentos_faltantes1__c = c.Documentos_faltantes1__c  +'\n Certificado policía';
             }
             If(c.Carne_de_vacunas_COVID_19__c == false){
-                c.Documentos_faltantes1__c = c.Documentos_faltantes1__c  +'\n Certificado de vacúna COVID 19';
+                c.Documentos_faltantes1__c = c.Documentos_faltantes1__c  +'\n Certificado de vacuna COVID 19';
             }
         }
     }
