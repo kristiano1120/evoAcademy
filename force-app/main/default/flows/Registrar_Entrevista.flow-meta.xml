@@ -5,7 +5,7 @@
         <description>Valida el estado en el que se encuentra el candidato para determinar que tipo de entrevista mostrar en pantalla</description>
         <name>Estado_del_Candidato</name>
         <label>Estado del Candidato</label>
-        <locationX>1634</locationX>
+        <locationX>1766</locationX>
         <locationY>278</locationY>
         <defaultConnector>
             <targetReference>Entrevista_en_etapa_erronea</targetReference>
@@ -70,6 +70,21 @@
                 <targetReference>Contacto_candidato</targetReference>
             </connector>
             <label>Preselección</label>
+        </rules>
+        <rules>
+            <name>Prueba_presentada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prueba presentada</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Prueba_presentada_mensaje</targetReference>
+            </connector>
+            <label>Prueba presentada</label>
         </rules>
     </decisions>
     <decisions>
@@ -137,7 +152,7 @@
             <label>nuevo registro</label>
         </rules>
     </decisions>
-    <description>Flujo de pantalla para registrar las entrevistas</description>
+    <description>Flujo de pantalla para registrar información en la diferentes etapas.</description>
     <dynamicChoiceSets>
         <name>valoresdecalificacion</name>
         <dataType>Picklist</dataType>
@@ -157,7 +172,7 @@
     </dynamicChoiceSets>
     <environments>Default</environments>
     <interviewLabel>Registrar Entrevista {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Registrar Entrevista</label>
+    <label>Registrar Información</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -180,7 +195,7 @@
     <recordLookups>
         <name>Obtener_Candidato</name>
         <label>Obtener Candidato</label>
-        <locationX>1634</locationX>
+        <locationX>1766</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -485,7 +500,7 @@
     <screens>
         <name>Entrevista_en_etapa_erronea</name>
         <label>Entrevista en etapa erronea</label>
-        <locationX>2954</locationX>
+        <locationX>3218</locationX>
         <locationY>398</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -531,6 +546,22 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Modificar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Prueba_presentada_mensaje</name>
+        <label>Prueba presentada</label>
+        <locationX>2954</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Copia_1_de_etapaErronea</name>
+            <fieldText>&lt;p&gt;Para ingresar datos del test Gorrilla, debe importarlos desde un archivo en formato .CSV, consulte con su administrador para más información.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -687,7 +718,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>1508</locationX>
+        <locationX>1640</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Obtener_Candidato</targetReference>

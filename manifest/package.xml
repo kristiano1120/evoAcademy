@@ -11,8 +11,8 @@
 		<name>AssignmentRules</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>ContentAsset</name>
+		<members>PlantillasEvolution/Carta_Agradecimiento_Descarte_1670854667817</members>
+		<name>EmailTemplate</name>
 	</types>
 	<types>
 		<members>Lead</members>
