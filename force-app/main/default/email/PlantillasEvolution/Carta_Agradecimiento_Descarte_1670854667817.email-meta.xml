@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>correo electrónico con mensaje de agradecimiento de participación en el proceso para informar al candidato que no continua en el proceso de seleccion</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Carta Agradecimiento Descarte</name>
+    <pageDevName>Carta_Agradecimiento_Descarte</pageDevName>
+    <relatedEntityType>Lead</relatedEntityType>
+    <style>none</style>
+    <subject>Carta de agradecimiento</subject>
+    <textOnly>Cordial saludo.
+
+Le queremos manifestar nuestro agradecimiento por el interés de haberte postulado en el proceso de selección para proveer el cargo Consultor Salesforce en nuestra empresa, agradeciendo su participación y el tiempo que ocupó en él. Informamos, que después de una cuidadosa revisión y de acuerdo a los resultados obtenidos en las últimas actividades en que ha participado, usted no ha quedado seleccionado para la siguiente etapa del proceso de selección en esta ocasión. No obstante, sus antecedentes serán conservados en nuestra base de datos, para que puedan ser considerados en futuros procesos de selección.
+
+Le deseamos éxito en sus futuras búsquedas laborales y le agradecemos nuevamente por haberse tomado el tiempo de presentar su candidatura.
+
+Atentamente, E-volution</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>
