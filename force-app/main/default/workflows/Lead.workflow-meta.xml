@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Candidato_Descartado</fullName>
+        <description>Alerta de correo electronico para notificar al candidato que no continua con el proceso de seleccion</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kristiano1120@academy.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>PlantillasEvolution/Carta_Agradecimiento_Descarte_1670854667817</template>
+    </alerts>
+    <alerts>
+        <fullName>Correo_Agradecimiento_Descarte</fullName>
+        <description>Correo electronico agradeciendo participar en el proceso</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>academyevolution@evolution.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>kristiano1120@academy.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Carta_Agradecimiento_Descarte</template>
+    </alerts>
+    <alerts>
+        <fullName>enviar_test_gorilla</fullName>
+        <description>enviar test gorilla</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/invitacion_test_gorilla_1670858965334</template>
+    </alerts>
+</Workflow>
