@@ -176,12 +176,12 @@
             <outputField>Titulo_adquirido__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>T_tulo_al_que_aspira__c</inputField>
-            <outputField>Titulo_al_que_aspira__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Acepta_terminos_y_condiciones__c</inputField>
             <outputField>Acepta_terminos_y_condiciones__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>T_tulo_al_que_aspira__c</inputField>
+            <outputField>Titulo_al_que_aspira__c</outputField>
         </mappingFields>
         <outputObject>Contact</outputObject>
     </objectMapping>
