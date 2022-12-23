@@ -73,6 +73,10 @@
         <label></label>
         <name>Registrar_Informacion</name>
     </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Registrar_Informacion_Admin</name>
+    </quickActions>
     <recordTypes>
         <description></description>
         <label></label>
