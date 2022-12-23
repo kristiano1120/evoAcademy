@@ -5,7 +5,7 @@
         <description>Valida el estado en el que se encuentra el candidato para determinar que tipo de entrevista mostrar en pantalla</description>
         <name>Estado_del_Candidato</name>
         <label>Estado del Candidato</label>
-        <locationX>1766</locationX>
+        <locationX>2030</locationX>
         <locationY>278</locationY>
         <defaultConnector>
             <targetReference>Entrevista_en_etapa_erronea</targetReference>
@@ -85,6 +85,21 @@
                 <targetReference>Prueba_presentada_mensaje</targetReference>
             </connector>
             <label>Prueba presentada</label>
+        </rules>
+        <rules>
+            <name>Contratacion</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Candidato.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contratación</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>adjuntarDocumentos</targetReference>
+            </connector>
+            <label>Contratacion</label>
         </rules>
     </decisions>
     <decisions>
@@ -195,7 +210,7 @@
     <recordLookups>
         <name>Obtener_Candidato</name>
         <label>Obtener Candidato</label>
-        <locationX>1766</locationX>
+        <locationX>2030</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -280,6 +295,97 @@
             <field>Feedback_Entrevista_Psicot_cnica__c</field>
             <value>
                 <elementReference>Feedback_psicotecnico</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Adjuntar_documentacion</name>
+        <label>Adjuntar documentacion</label>
+        <locationX>3218</locationX>
+        <locationY>518</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Actualizacion_fallo</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Carne_de_vacunas_COVID_19__c</field>
+            <value>
+                <elementReference>Carn_de_vacunas_COVID_19</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_AFP__c</field>
+            <value>
+                <elementReference>Certificado_AFP</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_EPS__c</field>
+            <value>
+                <elementReference>Certificado_EPS</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_bancario__c</field>
+            <value>
+                <elementReference>Certificado_bancario</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_contraloria__c</field>
+            <value>
+                <elementReference>Certificado_contralor_a</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_policia__c</field>
+            <value>
+                <elementReference>Certificado_polic_a</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificado_procuraduria__c</field>
+            <value>
+                <elementReference>Certificado_procuradur_a</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificados_academicos__c</field>
+            <value>
+                <elementReference>Certificados_acad_micos</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Certificados_personas_a_cargo__c</field>
+            <value>
+                <elementReference>Certificados_personas_a_cargo</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Documento_de_identidad__c</field>
+            <value>
+                <elementReference>Documento_de_identidad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Examen_medico__c</field>
+            <value>
+                <elementReference>Examen_m_dico</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Hoja_de_vida__c</field>
+            <value>
+                <elementReference>hoja_de_vida</elementReference>
             </value>
         </inputAssignments>
         <object>Lead</object>
@@ -399,6 +505,218 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>adjuntarDocumentos</name>
+        <label>adjuntarDocumentos</label>
+        <locationX>3218</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Adjuntar_documentacion</targetReference>
+        </connector>
+        <fields>
+            <name>adjuntarDocumentos_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>adjuntarDocumentos_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>SubirDocumentacion</name>
+                    <extensionName>forceContent:fileUpload</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Subir Documentación</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>accept</name>
+                        <value>
+                            <stringValue>.PDF</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>recordId</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>multiple</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Documentos</name>
+            <fieldText>Documentos Adjuntos</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Documentos_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>hoja_de_vida</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Hoja_de_vida__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Hoja de vida</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Documento_de_identidad</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Documento_de_identidad__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Documento de identidad</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificado_EPS</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_EPS__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado EPS</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificado_AFP</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_AFP__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado AFP</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificados_acad_micos</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificados_academicos__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificados académicos</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificado_polic_a</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_policia__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado policía</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Documentos_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Certificado_contralor_a</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_contraloria__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado contraloría</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificado_procuradur_a</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_procuraduria__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado procuraduría</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificado_bancario</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificado_bancario__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificado bancario</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Certificados_personas_a_cargo</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Certificados_personas_a_cargo__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Certificados personas a cargo</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Examen_m_dico</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Examen_medico__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Examen médico</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Carn_de_vacunas_COVID_19</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>Obtener_Candidato.Carne_de_vacunas_COVID_19__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Carné de vacunas COVID-19</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Contacto_candidato</name>
         <label>Contacto candidato</label>
         <locationX>2690</locationX>
@@ -500,7 +818,7 @@
     <screens>
         <name>Entrevista_en_etapa_erronea</name>
         <label>Entrevista en etapa erronea</label>
-        <locationX>3218</locationX>
+        <locationX>3746</locationX>
         <locationY>398</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -718,7 +1036,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>1640</locationX>
+        <locationX>1904</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Obtener_Candidato</targetReference>

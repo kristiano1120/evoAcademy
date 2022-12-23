@@ -35,7 +35,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>SI</fullName>
+            <fullName>Si</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -4662,7 +4662,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>SI</fullName>
+            <fullName>Si</fullName>
             <default>false</default>
         </values>
     </picklistValues>

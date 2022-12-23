@@ -20,6 +20,10 @@
             <field>Email</field>
             <type>email</type>
         </recipients>
+        <recipients>
+            <recipient>academyevolution@evolution.com</recipient>
+            <type>user</type>
+        </recipients>
         <senderAddress>academyevolution2022@gmail.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/Carta_Agradecimiento_Descarte</template>

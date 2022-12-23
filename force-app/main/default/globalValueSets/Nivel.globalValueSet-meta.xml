@@ -50,6 +50,7 @@
         <default>false</default>
         <label>10</label>
     </customValue>
+    <description>Nivel o semestre actual cursado por el candidato en una institución educativa</description>
     <masterLabel>Nivel</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

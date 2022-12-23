@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+    <!--<types>
         <members>*</members>
         <name>ApexComponent</name>
     </types>
@@ -27,6 +27,18 @@
     <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>-->
+    <types>
+        <members>RRHH</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Reclutador</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Director</members>
+        <name>Profile</name>
     </types>
     <version>55.0</version>
 </Package>

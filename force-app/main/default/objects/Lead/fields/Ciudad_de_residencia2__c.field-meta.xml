@@ -1724,6 +1724,10 @@
             <valueName>Tamalameque</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Bogotá D.C.</controllingFieldValue>
+            <valueName>Bogotá D.C</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Chocó</controllingFieldValue>
             <valueName>Quibdó</valueName>
         </valueSettings>
@@ -3286,10 +3290,6 @@
         <valueSettings>
             <controllingFieldValue>Atlántico</controllingFieldValue>
             <valueName>Soledad</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Bogotá D.C.</controllingFieldValue>
-            <valueName>Bogotá D.C</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Bolívar</controllingFieldValue>

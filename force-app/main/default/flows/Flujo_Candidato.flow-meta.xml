@@ -4,7 +4,7 @@
         <description>Correo electrónico para nuevos empleados</description>
         <name>Bienvenida_al_empleo</name>
         <label>Bienvenida al empleo</label>
-        <locationX>2162</locationX>
+        <locationX>1898</locationX>
         <locationY>455</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
@@ -44,7 +44,7 @@
         <description>Envia un correo electronico al candidato con un mensaje de agradecimiento</description>
         <name>Correo_Electronico_Agradecimiento</name>
         <label>Correo Electronico Agradecimiento</label>
-        <locationX>2426</locationX>
+        <locationX>2162</locationX>
         <locationY>575</locationY>
         <actionName>Lead.Correo_Agradecimiento_Descarte</actionName>
         <actionType>emailAlert</actionType>
@@ -60,7 +60,7 @@
     <decisions>
         <name>Cambio_a_activo</name>
         <label>Cambio a activo</label>
-        <locationX>1832</locationX>
+        <locationX>1634</locationX>
         <locationY>335</locationY>
         <defaultConnector>
             <targetReference>Candidato_Descartado</targetReference>
@@ -102,7 +102,7 @@
                 <leftValueReference>$Record.RecordTypeId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn000000MLT5IAO</stringValue>
+                    <stringValue>012Dn0000005rYgIAI</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -122,7 +122,7 @@
         <description>Decision para identificar si el registro de candidato esta siendo Descartado</description>
         <name>Candidato_Descartado</name>
         <label>Candidato Descartado</label>
-        <locationX>2690</locationX>
+        <locationX>2426</locationX>
         <locationY>455</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
@@ -132,14 +132,14 @@
                 <leftValueReference>$Record__Prior.RecordType.Id</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn000000MLTqIAO</stringValue>
+                    <stringValue>012Dn0000005rp5IAA</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.RecordType.Id</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>012Dn000000MLTqIAO</stringValue>
+                    <stringValue>012Dn0000005rp5IAA</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -180,7 +180,7 @@
     <decisions>
         <name>Valida_etapa</name>
         <label>Valida etapa</label>
-        <locationX>974</locationX>
+        <locationX>842</locationX>
         <locationY>455</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
@@ -273,21 +273,6 @@
             </connector>
             <label>Cultivación</label>
         </rules>
-        <rules>
-            <name>Contrataci_n</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Contratación</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>a_Conversi_n</targetReference>
-            </connector>
-            <label>Contratación</label>
-        </rules>
     </decisions>
     <description>Flujo para el objeto candidato</description>
     <environments>Default</environments>
@@ -326,19 +311,6 @@
             <field>Status</field>
             <value>
                 <stringValue>Contratación</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>a_Conversi_n</name>
-        <label>a Conversión</label>
-        <locationX>1634</locationX>
-        <locationY>575</locationY>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Conversión</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -412,7 +384,7 @@
         <description>Actualiza la etapa del candidato automaticamente si la calificacion de la entrevista tecnica fue de 10</description>
         <name>Aprobar_entrevista</name>
         <label>Aprobar entrevista</label>
-        <locationX>2690</locationX>
+        <locationX>2426</locationX>
         <locationY>575</locationY>
         <inputAssignments>
             <field>Status</field>
@@ -423,7 +395,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>1706</locationX>
+        <locationX>1508</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Cambio_a_activo</targetReference>

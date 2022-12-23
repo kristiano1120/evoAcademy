@@ -4,6 +4,58 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
+            <inputField>Atencion_al_detalle__c</inputField>
+            <outputField>Atencion_al_detalle__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Calificacion_Psicotecnica__c</inputField>
+            <outputField>Calificacion_Psicotecnica__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Calificacion_Tecnica__c</inputField>
+            <outputField>Calificacion_Tecnica__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Carne_de_vacunas_COVID_19__c</inputField>
+            <outputField>Carne_de_vacunas_COVID_19__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_AFP__c</inputField>
+            <outputField>Certificado_AFP__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_bancario__c</inputField>
+            <outputField>Certificado_bancario__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_contraloria__c</inputField>
+            <outputField>Certificado_contraloria__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_EPS__c</inputField>
+            <outputField>Certificado_EPS__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_policia__c</inputField>
+            <outputField>Certificado_policia__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificado_procuraduria__c</inputField>
+            <outputField>Certificado_procuraduria__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificados_academicos__c</inputField>
+            <outputField>Certificados_academicos__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Certificados_personas_a_cargo__c</inputField>
+            <outputField>Certificados_personas_a_cargo__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Ciudad_de_residencia2__c</inputField>
+            <outputField>Ciudad_de_residencia__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Conocimientos_t_cnicos__c</inputField>
             <outputField>Conocimientos_tecnicos__c</outputField>
         </mappingFields>
@@ -44,58 +96,6 @@
             <outputField>Feedback_Terminos_y_Condiciones__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Carne_de_vacunas_COVID_19__c</inputField>
-            <outputField>Carne_de_vacunas_COVID_19__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_bancario__c</inputField>
-            <outputField>Certificado_bancario__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_contraloria__c</inputField>
-            <outputField>Certificado_contraloria__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_EPS__c</inputField>
-            <outputField>Certificado_EPS__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_policia__c</inputField>
-            <outputField>Certificado_policia__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_AFP__c</inputField>
-            <outputField>Certificado_AFP__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificado_procuraduria__c</inputField>
-            <outputField>Certificado_procuraduria__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificados_academicos__c</inputField>
-            <outputField>Certificados_academicos__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Certificados_personas_a_cargo__c</inputField>
-            <outputField>Certificados_personas_a_cargo__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Ciudad_de_residencia2__c</inputField>
-            <outputField>Ciudad_de_residencia__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Atencion_al_detalle__c</inputField>
-            <outputField>Atencion_al_detalle__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Calificacion_Psicotecnica__c</inputField>
-            <outputField>Calificacion_Psicotecnica__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Calificacion_Tecnica__c</inputField>
-            <outputField>Calificacion_Tecnica__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Hoja_de_vida__c</inputField>
             <outputField>Hoja_de_vida__c</outputField>
         </mappingFields>
@@ -122,6 +122,34 @@
         <mappingFields>
             <inputField>Nivel_actual__c</inputField>
             <outputField>Nivel_actual__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nivel_de_escolaridad__c</inputField>
+            <outputField>Nivel_de_escolaridad__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nivel_de_ingl_s__c</inputField>
+            <outputField>Nivel_de_ingles__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nombre_de_la_empresa__c</inputField>
+            <outputField>Nombre_de_la_empresa__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Numero_de_Identificacion__c</inputField>
+            <outputField>Numero_de_Identificacion__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Fecha_de_finalizaci_n2__c</inputField>
+            <outputField>Fecha_de_finalizacion2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Fecha_de_inicio2__c</inputField>
+            <outputField>Fecha_de_inicio2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Cargo2__c</inputField>
+            <outputField>Cargo2__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Jefe_inmediato2__c</inputField>
@@ -154,34 +182,6 @@
         <mappingFields>
             <inputField>Acepta_terminos_y_condiciones__c</inputField>
             <outputField>Acepta_terminos_y_condiciones__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Cargo2__c</inputField>
-            <outputField>Cargo2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nivel_de_escolaridad__c</inputField>
-            <outputField>Nivel_de_escolaridad__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nivel_de_ingl_s__c</inputField>
-            <outputField>Nivel_de_ingles__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nombre_de_la_empresa__c</inputField>
-            <outputField>Nombre_de_la_empresa__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Numero_de_Identificacion__c</inputField>
-            <outputField>Numero_de_Identificacion__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Fecha_de_finalizaci_n2__c</inputField>
-            <outputField>Fecha_de_finalizacion2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Fecha_de_inicio2__c</inputField>
-            <outputField>Fecha_de_inicio2__c</outputField>
         </mappingFields>
         <outputObject>Contact</outputObject>
     </objectMapping>

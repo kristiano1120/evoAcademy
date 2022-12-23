@@ -4,6 +4,7 @@
     <description>Plantilla para la invitación a realizar el test gorilla</description>
     <encodingKey>UTF-8</encodingKey>
     <name>instrucciones_test_gorilla</name>
+    <pageDevName>invitacion_test_gorilla</pageDevName>
     <relatedEntityType>Lead</relatedEntityType>
     <style>none</style>
     <subject>Proceso de Selección Consultoría en Salesforce</subject>

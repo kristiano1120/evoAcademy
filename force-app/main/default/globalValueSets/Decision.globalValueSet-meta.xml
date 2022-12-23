@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>SI</fullName>
+        <fullName>Si</fullName>
         <default>false</default>
-        <label>SI</label>
+        <label>Si</label>
     </customValue>
     <customValue>
         <fullName>No</fullName>
         <default>false</default>
         <label>No</label>
     </customValue>
+    <description>Permite registrar una respuesta afirmativa o negativa</description>
     <masterLabel>Decisión</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
