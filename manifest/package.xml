@@ -40,5 +40,9 @@
         <members>Director</members>
         <name>Profile</name>
     </types>
+    <types>
+        <members>Entrenador</members>
+        <name>Profile</name>
+    </types>
     <version>55.0</version>
 </Package>
