@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>boton unico para el administrador, para que pueda registrar informacion</description>
+    <flowDefinition>Registrar_Entrevista</flowDefinition>
+    <label>Registrar Informacion Admin</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
