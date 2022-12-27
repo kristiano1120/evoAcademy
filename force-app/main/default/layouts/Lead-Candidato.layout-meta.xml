@@ -42,6 +42,14 @@
                 <behavior>Required</behavior>
                 <field>Tiene_experiencia_laboral__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CampaignId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Convocatoria__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

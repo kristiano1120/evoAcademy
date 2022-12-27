@@ -159,6 +159,10 @@
                 <behavior>Edit</behavior>
                 <field>Address</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Convocatoria__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

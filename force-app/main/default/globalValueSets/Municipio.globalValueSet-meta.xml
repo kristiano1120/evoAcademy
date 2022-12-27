@@ -4960,6 +4960,12 @@
         <default>false</default>
         <label>Cumaribo</label>
     </customValue>
+    <customValue>
+        <fullName>Sabanalarga(ATL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sabanalarga(ATL)</label>
+    </customValue>
     <description>Municipios pertenecientes a los departamentos de colombia</description>
     <masterLabel>Municipio</masterLabel>
     <sorted>false</sorted>

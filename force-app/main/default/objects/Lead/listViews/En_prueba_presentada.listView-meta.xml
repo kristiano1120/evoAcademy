@@ -10,6 +10,11 @@
     <columns>Test_gorilla_enviado__c</columns>
     <columns>LEAD.CREATED_DATE</columns>
     <columns>CORE.USERS.ALIAS</columns>
+    <columns>Atencion_al_detalle__c</columns>
+    <columns>Matematicas_basicas_de_tres_digitos__c</columns>
+    <columns>Matematicas_intermedias__c</columns>
+    <columns>Razonamiento_numerico__c</columns>
+    <columns>Total_Gorilla__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>LEAD.STATUS</field>

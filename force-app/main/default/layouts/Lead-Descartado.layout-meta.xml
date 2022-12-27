@@ -27,6 +27,10 @@
                 <behavior>Edit</behavior>
                 <field>inicio_de_funciones__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Convocatoria__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
