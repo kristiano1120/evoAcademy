@@ -404,7 +404,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <textTemplates>
         <description>Mensaje de bienvenida para nuevos empleados de la compañía, con información clave para el inicio de labores</description>
         <name>Bienvenida</name>
