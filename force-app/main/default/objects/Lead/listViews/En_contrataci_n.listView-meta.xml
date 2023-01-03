@@ -18,9 +18,9 @@
         <value>1</value>
     </filters>
     <filters>
-        <field>Test_gorilla_enviado__c</field>
+        <field>LEAD.RECORDTYPE</field>
         <operation>equals</operation>
-        <value>0</value>
+        <value>Lead.Candidato</value>
     </filters>
-    <label>En contratación</label>
+    <label>(Salesforce) En contratación</label>
 </ListView>

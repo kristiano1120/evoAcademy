@@ -85,6 +85,11 @@
     <recordTypes>
         <description></description>
         <label></label>
+        <name>CandidatoEvo</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
         <name>Cliente</name>
     </recordTypes>
     <recordTypes>

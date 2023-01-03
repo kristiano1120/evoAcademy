@@ -41,6 +41,39 @@
         </inputParameters>
     </actionCalls>
     <actionCalls>
+        <name>Correo_de_agenda</name>
+        <label>Correo de agenda</label>
+        <locationX>1502</locationX>
+        <locationY>1127</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>Asunto</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Correodeagenda</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <description>Envia un correo electronico al candidato con un mensaje de agradecimiento</description>
         <name>Correo_Electronico_Agradecimiento</name>
         <label>Correo Electronico Agradecimiento</label>
@@ -124,6 +157,9 @@
         <label>Candidato Descartado</label>
         <locationX>2426</locationX>
         <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>Correo_de_agendamiento</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>Descartado</name>
@@ -155,8 +191,45 @@
             <label>Descartado</label>
         </rules>
         <rules>
-            <name>Resultado_perfecto_Entrevista_Tecnica</name>
+            <name>Resultado_perfecto</name>
             <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calificacion_Tecnica__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>10</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calificacion_Tecnica__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Aprobar_entrevista</targetReference>
+            </connector>
+            <label>Resultado perfecto</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Envía un correo con la agenda del entrevistador cuando un candidato cambia una nueva etapa de entrevista</description>
+        <name>Correo_de_agendamiento</name>
+        <label>Correo de agendamiento</label>
+        <locationX>1634</locationX>
+        <locationY>1007</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Enviar_correo</name>
+            <conditionLogic>((1 OR 2 OR 3) AND 4) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cualificación psicotécnica</stringValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
@@ -165,16 +238,30 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Calificacion_Tecnica__c</leftValueReference>
+                <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>10</stringValue>
+                    <stringValue>Términos y condiciones</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Activo__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Aprobar_entrevista</targetReference>
+                <targetReference>Correo_de_agenda</targetReference>
             </connector>
-            <label>Resultado perfecto Entrevista Tecnica</label>
+            <label>Enviar correo</label>
         </rules>
     </decisions>
     <decisions>
@@ -277,9 +364,19 @@
     <description>Flujo para el objeto candidato</description>
     <environments>Default</environments>
     <formulas>
+        <name>Asunto</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Status},&apos;Cualificación psicotécnica&apos;),&apos;Entrevista: Psicotécnica&apos;,IF(ISPICKVAL({!$Record.Status},&apos;Cualificación técnica&apos;),&apos;Entrevista: Técnica&apos;,IF(ISPICKVAL({!$Record.Status},&apos;Términos y condiciones&apos;), &apos;Entrevista: Términos y condiciones&apos;, &apos;&apos;)))</expression>
+    </formulas>
+    <formulas>
         <name>IsChanged</name>
         <dataType>Boolean</dataType>
         <expression>ISCHANGED({!$Record.Activo__c})</expression>
+    </formulas>
+    <formulas>
+        <name>LinkReunion</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Status},&apos;Cualificación psicotécnica&apos;),&apos;https://calendly.com/evolution23/entrevista-psicotecnica&apos;,IF((ISPICKVAL({!$Record.Status},&apos;Cualificación técnica&apos;)) &amp;&amp; (CONTAINS({!$Record.RecordType.DeveloperName},&apos;CandidatoEvo&apos;)),&apos;https://calendly.com/evolution23/entrevista-tecnica-evo&apos;,IF(ISPICKVAL({!$Record.Status},&apos;Términos y condiciones&apos;), &apos;https://calendly.com/evolution23/terminos-y-condiciones&apos;, IF((ISPICKVAL({!$Record.Status},&apos;Cualificación técnica&apos;)) &amp;&amp; (CONTAINS({!$Record.RecordType.DeveloperName},&apos;Candidato&apos;)), &apos;https://calendly.com/evolution23/entrevista-tecnica&apos;,&apos;&apos;))))</expression>
     </formulas>
     <interviewLabel>Flujo Candidato {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Flujo Candidato</label>
@@ -320,6 +417,9 @@
         <label>A Cualificación psicotécnica</label>
         <locationX>578</locationX>
         <locationY>575</locationY>
+        <connector>
+            <targetReference>Correo_de_agendamiento</targetReference>
+        </connector>
         <inputAssignments>
             <field>Status</field>
             <value>
@@ -333,6 +433,9 @@
         <label>A Cualificación técnica</label>
         <locationX>842</locationX>
         <locationY>575</locationY>
+        <connector>
+            <targetReference>Correo_de_agendamiento</targetReference>
+        </connector>
         <inputAssignments>
             <field>Status</field>
             <value>
@@ -346,10 +449,13 @@
         <label>A Cultivación</label>
         <locationX>1106</locationX>
         <locationY>575</locationY>
+        <connector>
+            <targetReference>Correo_de_agendamiento</targetReference>
+        </connector>
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>Cultivación</stringValue>
+                <stringValue>Términos y condiciones</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -375,7 +481,7 @@
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>Prueba presentada</stringValue>
+                <stringValue>Assessment</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -386,10 +492,21 @@
         <label>Aprobar entrevista</label>
         <locationX>2426</locationX>
         <locationY>575</locationY>
+        <connector>
+            <targetReference>Correo_de_agendamiento</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Calificacion_Tecnica__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>10</stringValue>
+            </value>
+        </filters>
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>Cultivación</stringValue>
+                <stringValue>Términos y condiciones</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -404,11 +521,16 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <textTemplates>
         <description>Mensaje de bienvenida para nuevos empleados de la compañía, con información clave para el inicio de labores</description>
         <name>Bienvenida</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;{!$Flow.CurrentDate}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/1054457319536201761/1054457399018266716/Bienvenido.png&quot; alt=&quot;Bienvenida&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Cordial saludo {!$Record.FirstName} {!$Record.LastName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Estamos encantados de tenerte entre nosotros. ¡En nombre de todos los miembros y de la dirección, nos gustaría extender nuestra más cálida bienvenida y buenos deseos!&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 12px; background-color: rgba(0, 0, 0, 0.01);&quot;&gt;Desde el día de hoy será su compañía... una compañía compuesta por personas amistosas, dispuestas y ansiosas de ayudarle a realizar eficientemente su trabajo. Le consideramos muy importante como miembro de nuestro personal.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;A continuación se le acerca información referente a su nuevo cargo:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;A partir del momento de inicio de labores serás entrenado en el dominio de la plataforma Salesforce con el objetivo de alcanzar las certificación como Administrador y Desarrollador Salesforce.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Horario y lugar de trabajo: &lt;/strong&gt;Lunes a viernes de 11 a.m a 8 p.m en la dirección Cll 30 sur #43A - 51 en el municipio de Envigado&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Fecha de inicio labores:&lt;/strong&gt; {!$Record.inicio_de_funciones__c}&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 12px; background-color: rgba(0, 0, 0, 0.01);&quot;&gt;Espero que encuentre satisfacción y alegría trabajando con nosotros.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Atentamente,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;E-volution&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/1054457319536201761/1054458144983621662/imagen_20221212_093431707.png&quot; alt=&quot;We love challenges&quot;&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Correodeagenda</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Arial; color: rgb(0, 0, 0);&quot;&gt;Cordial saludo! {!$Record.FirstName} {!$Record.LastName}, &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Arial; color: rgb(0, 0, 0);&quot;&gt;De parte del equipo de E-volution le queremos informar que su proceso sigue avanzando, a continuación le compartimos el vínculo para que agendar su entrevista de {!$Record.Status}.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;{!LinkReunion}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Agendar entrevista&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Arial; color: rgb(0, 0, 0);&quot;&gt;Le solicitamos al momento de agendar su entrevista utilizar el mismo correo electrónico al cual le llegó esta información. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Arial; color: rgb(0, 0, 0);&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/1054438823133728828/1054438888778764458/imagen_2022-12-12_093431707.png&quot; alt=&quot;imagen_2022-12-12_093431707.png&quot;&gt;&lt;/span&gt;&lt;/p&gt;</text>
     </textTemplates>
 </Flow>

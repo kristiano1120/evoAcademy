@@ -4,8 +4,8 @@
     <active>true</active>
     <businessProcess>Reclutamiento</businessProcess>
     <compactLayoutAssignment>Formato_compacto_candidato</compactLayoutAssignment>
-    <description>Tipo de registro dedicado a las personas que aspiran ser empleados de la compañía</description>
-    <label>Candidato</label>
+    <description>Tipo de registro dedicado a las personas que aspiran ser empleados de la compañía en la división salesforce</description>
+    <label>Candidato Salesforce</label>
     <picklistValues>
         <picklist>Acepta_terminos_y_condiciones__c</picklist>
         <values>
@@ -14,17 +14,6 @@
         </values>
         <values>
             <fullName>SI</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Acepta_trabajo_presencial__c</picklist>
-        <values>
-            <fullName>No</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sí</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -4097,49 +4086,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Conocimientos_t_cnicos__c</picklist>
-        <values>
-            <fullName>C%23</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>C%2B%2B</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CSS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>HTML</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Java</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Javascript</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PHP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Python</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>React</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SQL</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Departamento__c</picklist>
         <values>
             <fullName>Amazonas</fullName>
@@ -4468,6 +4414,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Modalidad_de_trabajo__c</picklist>
+        <values>
+            <fullName>Híbrido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Motivo_de_descarte__c</picklist>
         <values>
             <fullName>Condiciones del Pagaré</fullName>
@@ -4482,7 +4443,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Otros</fullName>
+            <fullName>Otro</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4678,6 +4639,21 @@
         </values>
         <values>
             <fullName>Tarjeta de Identidad</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_vinculaci_n_que_busca__c</picklist>
+        <values>
+            <fullName>Freelance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medio tiempo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiempo completo</fullName>
             <default>false</default>
         </values>
     </picklistValues>

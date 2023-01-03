@@ -516,53 +516,36 @@
             <targetReference>Adjuntar_documentacion</targetReference>
         </connector>
         <fields>
-            <name>adjuntarDocumentos_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>adjuntarDocumentos_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>SubirDocumentacion</name>
-                    <extensionName>forceContent:fileUpload</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Subir Documentación</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>accept</name>
-                        <value>
-                            <stringValue>.PDF</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>recordId</name>
-                        <value>
-                            <elementReference>recordId</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>multiple</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <name>SubirDocumentacion</name>
+            <extensionName>forceContent:fileUpload</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Subir Documentacion</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>accept</name>
+                <value>
+                    <stringValue>.PDF</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>recordId</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>multiple</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
             <name>Documentos</name>
@@ -1042,7 +1025,7 @@
             <targetReference>Obtener_Candidato</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

@@ -27,20 +27,26 @@
                 <label>Condiciones del Pagaré</label>
             </value>
             <value>
-                <fullName>Otros</fullName>
-                <default>false</default>
-                <label>Otros</label>
-            </value>
-            <value>
                 <fullName>Incompatibilidad con el puesto</fullName>
                 <default>false</default>
                 <label>Incompatibilidad con el puesto</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
             </value>
             <value>
                 <fullName>Condiciones del Pagare</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
                 <label>Condiciones del Pagare</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Otros</label>
             </value>
         </valueSetDefinition>
     </valueSet>

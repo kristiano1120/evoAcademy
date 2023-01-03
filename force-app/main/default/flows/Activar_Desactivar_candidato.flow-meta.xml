@@ -160,7 +160,7 @@
             <targetReference>candidato</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>Desactivar</name>
         <dataType>SObject</dataType>

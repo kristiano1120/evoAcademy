@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Cliente</fullName>
+    <fullName>CandidatoEvo</fullName>
     <active>true</active>
-    <businessProcess>Reclutamiento</businessProcess>
-    <description>Tipo de registro dedicado a las personas o empresas que desean adquirir los servicios de la compañía</description>
-    <label>Cliente</label>
+    <businessProcess>Reclutamiento evo</businessProcess>
+    <description>Tipo de registro dedicado a las personas que aspiran ser empleados de la compañía en la división e-volution</description>
+    <label>Candidato E-Volution</label>
     <picklistValues>
         <picklist>Acepta_terminos_y_condiciones__c</picklist>
         <values>
@@ -4409,7 +4409,7 @@
         </values>
         <values>
             <fullName>Web</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -4438,7 +4438,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Otro</fullName>
+            <fullName>Incompatibilidad con el puesto</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4519,7 +4519,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Doctorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Especialización</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maestría</fullName>
             <default>false</default>
         </values>
         <values>

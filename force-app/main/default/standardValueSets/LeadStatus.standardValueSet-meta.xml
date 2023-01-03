@@ -14,9 +14,9 @@
         <converted>false</converted>
     </standardValue>
     <standardValue>
-        <fullName>Prueba presentada</fullName>
+        <fullName>Assessment</fullName>
         <default>false</default>
-        <label>Prueba presentada</label>
+        <label>Assessment</label>
         <converted>false</converted>
     </standardValue>
     <standardValue>
@@ -32,9 +32,9 @@
         <converted>false</converted>
     </standardValue>
     <standardValue>
-        <fullName>Cultivación</fullName>
+        <fullName>Términos y condiciones</fullName>
         <default>false</default>
-        <label>Cultivación</label>
+        <label>Términos y condiciones</label>
         <converted>false</converted>
     </standardValue>
     <standardValue>

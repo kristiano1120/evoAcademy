@@ -17,6 +17,7 @@
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Customer</tabs>
+    <tabs>standard-Campaign</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>E_volution_Academy_UtilityBar</utilityBar>
 </CustomApplication>

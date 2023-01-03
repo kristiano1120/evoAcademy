@@ -17,10 +17,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Acepta_trabajo_presencial__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Nivel_de_escolaridad__c</field>
             </layoutItems>
             <layoutItems>
@@ -161,7 +157,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Convocatoria__c</field>
+                <field>prueba_enriquesida__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tipo_de_vinculaci_n_que_busca__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Modalidad_de_trabajo__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Archivo_con_hoja_de_vida__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
