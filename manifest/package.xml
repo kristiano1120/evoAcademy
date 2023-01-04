@@ -40,8 +40,12 @@
         <members>Director</members>
         <name>Profile</name>
     </types>
+     <types>
+        <members>Entrenador Salesforce</members>
+        <name>Profile</name>
+    </types>
     <types>
-        <members>Entrenador</members>
+        <members>Entrenador E-volution</members>
         <name>Profile</name>
     </types>
     <version>55.0</version>
