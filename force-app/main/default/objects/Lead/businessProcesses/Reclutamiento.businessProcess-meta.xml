@@ -24,15 +24,15 @@
         <default>false</default>
     </values>
     <values>
+        <fullName>Entrevista final</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Identificación</fullName>
         <default>true</default>
     </values>
     <values>
         <fullName>Preselección</fullName>
-        <default>false</default>
-    </values>
-    <values>
-        <fullName>Términos y condiciones</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

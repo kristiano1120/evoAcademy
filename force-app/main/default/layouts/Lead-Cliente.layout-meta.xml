@@ -157,19 +157,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>prueba_enriquesida__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Tipo_de_vinculaci_n_que_busca__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Modalidad_de_trabajo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Archivo_con_hoja_de_vida__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>

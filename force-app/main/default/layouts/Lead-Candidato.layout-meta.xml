@@ -32,7 +32,8 @@
                 <field>Nivel_de_ingl_s__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>Modalidad_de_trabajo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -195,7 +196,7 @@
                 <field>Test_gorilla_enviado__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Total_Gorilla__c</field>
             </layoutItems>
         </layoutColumns>
@@ -218,11 +219,11 @@
         <label>Cualificación psicotécnica</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Calificacion_Psicotecnica__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Feedback_Entrevista_Psicot_cnica__c</field>
             </layoutItems>
         </layoutColumns>
@@ -235,11 +236,11 @@
         <label>Cualificacion Técnica</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Calificacion_Tecnica__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Feedback_Entrevista_Tecnica__c</field>
             </layoutItems>
         </layoutColumns>
@@ -252,11 +253,11 @@
         <label>Cultivación</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Acepta_terminos_y_condiciones__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Feedback_Terminos_y_Condiciones__c</field>
             </layoutItems>
         </layoutColumns>
@@ -503,6 +504,15 @@
     </quickActionList>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CAMPAIGN.NAME</fields>
+        <fields>CAMPAIGN.START_DATE</fields>
+        <fields>CAMPAIGN.CAMPAIGN_TYPE</fields>
+        <fields>CM.STATUS</fields>
+        <fields>CM.RESPONDED</fields>
+        <fields>CM.LAST_UPDATE</fields>
+        <relatedList>RelatedCampaignList</relatedList>
     </relatedLists>
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
     <showEmailCheckbox>false</showEmailCheckbox>

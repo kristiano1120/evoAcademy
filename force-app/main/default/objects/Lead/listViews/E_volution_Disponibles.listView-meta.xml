@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Descartados</fullName>
+    <fullName>E_volution_Disponibles</fullName>
     <columns>FULL_NAME</columns>
     <columns>LEAD.EMAIL</columns>
     <columns>LEAD.COMPANY</columns>
+    <columns>Activo__c</columns>
     <columns>LEAD.STATUS</columns>
+    <columns>LEAD.STATE</columns>
     <columns>LEAD.UNREAD</columns>
     <columns>LEAD.CREATED_DATE</columns>
     <columns>CORE.USERS.ALIAS</columns>
@@ -12,7 +14,15 @@
     <filters>
         <field>LEAD.RECORDTYPE</field>
         <operation>equals</operation>
-        <value>Lead.Descartado</value>
+        <value>Lead.CandidatoEvo</value>
     </filters>
-    <label>Descartados</label>
+    <filters>
+        <field>Activo__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>(E-volution) Disponibles</label>
+    <sharedTo>
+        <role>Entrenador_E_volution</role>
+    </sharedTo>
 </ListView>

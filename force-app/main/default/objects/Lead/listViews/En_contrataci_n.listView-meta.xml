@@ -23,4 +23,9 @@
         <value>Lead.Candidato</value>
     </filters>
     <label>(Salesforce) En contratación</label>
+    <sharedTo>
+        <role>DirectorSalesforce</role>
+        <role>Liderrecursoshumanos</role>
+        <role>Reclutador</role>
+    </sharedTo>
 </ListView>

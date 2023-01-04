@@ -4,7 +4,7 @@
     <description>Información que se proporciona durante la entrevista, bien sea una retroalimentación, nota o comentario.</description>
     <externalId>false</externalId>
     <inlineHelpText>Notas y/o comentarios</inlineHelpText>
-    <label>Feedback Terminos y Condiciones</label>
+    <label>Feedback</label>
     <length>500</length>
     <trackFeedHistory>false</trackFeedHistory>
     <type>LongTextArea</type>

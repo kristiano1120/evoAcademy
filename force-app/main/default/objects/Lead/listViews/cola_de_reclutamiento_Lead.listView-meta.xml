@@ -14,6 +14,8 @@
     <label>Cola de reclutamiento</label>
     <queue>cola_de_reclutamiento</queue>
     <sharedTo>
-        <allInternalUsers></allInternalUsers>
+        <role>DirectorSalesforce</role>
+        <role>Liderrecursoshumanos</role>
+        <role>Reclutador</role>
     </sharedTo>
 </ListView>

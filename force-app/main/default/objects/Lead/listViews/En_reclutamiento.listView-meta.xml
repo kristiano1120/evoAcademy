@@ -22,4 +22,7 @@
         <value>1</value>
     </filters>
     <label>(Salesforce) Disponibles</label>
+    <sharedTo>
+        <role>Entrenador_Salesforce</role>
+    </sharedTo>
 </ListView>

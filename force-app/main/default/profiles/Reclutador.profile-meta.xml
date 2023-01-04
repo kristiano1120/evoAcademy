@@ -22,10 +22,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LeadWithAttachmentEmailHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>TriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -452,11 +448,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Lead.Archivo_con_hoja_de_vida__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Lead.Aspiraci_n_salarial__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -855,11 +846,6 @@
         <field>Lead.inicio_de_funciones__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Lead.prueba_enriquesida__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <layoutAssignments>
         <layout>Contact-Empleado</layout>
     </layoutAssignments>
@@ -902,7 +888,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Lead.CandidatoEvo</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

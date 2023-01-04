@@ -22,10 +22,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LeadWithAttachmentEmailHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>TriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -423,10 +419,10 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Acepta_terminos_y_condiciones__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Lead.Activo__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -448,11 +444,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Aprobo__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Lead.Archivo_con_hoja_de_vida__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -813,7 +804,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Test_gorilla_enviado__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -855,13 +846,12 @@
         <field>Lead.inicio_de_funciones__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Lead.prueba_enriquesida__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <layoutAssignments>
         <layout>Contact-Empleado</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Lead-Candidato</layout>
+        <recordType>Lead.Candidato</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Lead-Cliente</layout>
@@ -882,10 +872,10 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
-        <allowDelete>true</allowDelete>
+        <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>Lead</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -903,7 +893,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Lead.Cliente</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
