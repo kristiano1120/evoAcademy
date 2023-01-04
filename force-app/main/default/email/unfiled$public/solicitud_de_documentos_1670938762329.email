@@ -86,7 +86,7 @@
                               <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">¿Tienes personas a cargo?</span></span></li>
                               <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">¿Tienes hijos? ¿Cuántos? </span></span></li>
                               <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Si tienes carnet de vacunación COVID-19, adjuntarlo de manera escaneada. </span></span></li>
-                              </ul>
+                              </ul><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><strong>TODOS LOS DOCUMENTOS DEBEN SER ENVIADOS A LA SIGUIENTE DIRECCIÓN DE CORREO ELECTRÓNICO:</strong></span></span><br /><a href="mailto:solicitud_documentos@airkw5knyxrpgmv6lk65yslz3uhjjsccbwlojjl17rf2z1awf.dn-4lt5ymas.na224.apex.salesforce.com" id="thePage:theForm:pageBlock2:addressTable:0:emailAddressLink" name="thePage:theForm:pageBlock2:addressTable:0:emailAddressLink">solicitud_documentos@salesforce.com</a>
                               <div class="page" title="Page 2">
                               <div class="section" style="background-color: rgb(100.000000%, 100.000000%, 100.000000%)">
                               <div class="layoutArea">

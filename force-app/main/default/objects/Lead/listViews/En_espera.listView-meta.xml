@@ -12,7 +12,7 @@
     <filters>
         <field>LEAD.RECORDTYPE</field>
         <operation>equals</operation>
-        <value>Lead.Candidato</value>
+        <value>Lead.CandidatoEvo,Lead.Candidato</value>
     </filters>
     <filters>
         <field>Activo__c</field>

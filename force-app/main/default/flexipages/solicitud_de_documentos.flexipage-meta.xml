@@ -39,7 +39,7 @@
                     <value>100</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:image</componentName>
-                <identifier>contentbuilder_image5</identifier>
+                <identifier>contentbuilder_image9</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-7894721e-fa0e-482b-b665-9d85b94cab9f</name>
@@ -67,7 +67,7 @@
                     <value>100%</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:column</componentName>
-                <identifier>contentbuilder_column5</identifier>
+                <identifier>contentbuilder_column9</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-34b3023d-cff6-4917-8aed-f453a2390989</name>
@@ -138,6 +138,8 @@
 	&lt;li&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif;&quot;&gt;&amp;iquest;Tienes hijos? &amp;iquest;Cuántos? &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif;&quot;&gt;Si tienes carnet de vacunación COVID-19, adjuntarlo de manera escaneada. &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif;&quot;&gt;&lt;strong&gt;TODOS LOS DOCUMENTOS DEBEN SER ENVIADOS A LA SIGUIENTE DIRECCI&amp;Oacute;N DE CORREO ELECTR&amp;Oacute;NICO:&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;a href=&quot;mailto:solicitud_documentos@airkw5knyxrpgmv6lk65yslz3uhjjsccbwlojjl17rf2z1awf.dn-4lt5ymas.na224.apex.salesforce.com&quot; id=&quot;thePage:theForm:pageBlock2:addressTable:0:emailAddressLink&quot; name=&quot;thePage:theForm:pageBlock2:addressTable:0:emailAddressLink&quot;&gt;solicitud_documentos@salesforce.com&lt;/a&gt;
 
 &lt;div class=&quot;page&quot; title=&quot;Page 2&quot;&gt;
 &lt;div class=&quot;section&quot; style=&quot;background-color: rgb(100.000000%, 100.000000%, 100.000000%)&quot;&gt;
@@ -167,7 +169,7 @@ Cordialmente&lt;br /&gt;
 &lt;/div&gt;</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:richText</componentName>
-                <identifier>contentbuilder_richText3</identifier>
+                <identifier>contentbuilder_richText5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -213,7 +215,7 @@ Cordialmente&lt;br /&gt;
                     <value>100</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:image</componentName>
-                <identifier>contentbuilder_image6</identifier>
+                <identifier>contentbuilder_image10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-3e73eaff-5d29-43c0-b242-11ba611f570d</name>
@@ -241,7 +243,7 @@ Cordialmente&lt;br /&gt;
                     <value>100%</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:column</componentName>
-                <identifier>contentbuilder_column6</identifier>
+                <identifier>contentbuilder_column10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-28ccf34f-5787-4264-9dec-e1791782cbef</name>
@@ -254,6 +256,9 @@ Cordialmente&lt;br /&gt;
                     <name>backgroundColor</name>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>backgroundImageUrl</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-34b3023d-cff6-4917-8aed-f453a2390989</value>
                 </componentInstanceProperties>
@@ -262,13 +267,16 @@ Cordialmente&lt;br /&gt;
                     <value>top</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:row</componentName>
-                <identifier>contentbuilder_row5</identifier>
+                <identifier>contentbuilder_row9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>backgroundColor</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>backgroundImageUrl</name>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>columns</name>
@@ -279,7 +287,7 @@ Cordialmente&lt;br /&gt;
                     <value>top</value>
                 </componentInstanceProperties>
                 <componentName>contentbuilder:row</componentName>
-                <identifier>contentbuilder_row6</identifier>
+                <identifier>contentbuilder_row10</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
