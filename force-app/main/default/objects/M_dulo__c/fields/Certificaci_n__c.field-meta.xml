@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificaci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Certificación</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo_de_certificaci_n__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Certificaci_n</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Advanced Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>CPQ Specialist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>Platform App Builder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <controllingFieldValue>Marketer</controllingFieldValue>
+            <valueName>Marketing Cloud Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Business Analyst</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Application Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>B2B Solution Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>B2C Solution Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>B2C Commerce Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Heroku Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>System Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Technical Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Development Lifecycle and Deployment Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Identity and Access Management Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Integration Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Data Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Architect</controllingFieldValue>
+            <valueName>Sharing and Visibility Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>B2C Commerce Developer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>Industries CPQ Developer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>JavaScript Developer I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <controllingFieldValue>Marketer</controllingFieldValue>
+            <valueName>Marketing Cloud Developer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>OmniStudio Developer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>Platform Developer I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Developer</controllingFieldValue>
+            <valueName>Platform Developer II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketer</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Marketing Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketer</controllingFieldValue>
+            <valueName>Marketing Cloud Email Specialist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketer</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Pardot Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Education Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Experience Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Field Service Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Nonprofit Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>OmniStudio Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Sales Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Service Cloud Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Tableau CRM &amp; Einstein Discovery Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Designer</controllingFieldValue>
+            <valueName>User Experience (UX) Designer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Designer</controllingFieldValue>
+            <valueName>Strategy Designer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

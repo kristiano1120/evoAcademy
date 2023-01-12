@@ -3,7 +3,6 @@
     <fullName>Resultado_gorilla_entre_0_y_100</fullName>
     <active>true</active>
     <description>Se valida que en este campo se ingrese un número válido (entre 0 y 100%)</description>
-    <errorConditionFormula>OR( Total_Gorilla__c  &lt; 0,Total_Gorilla__c   &gt;  1)</errorConditionFormula>
-    <errorDisplayField>Total_Gorilla__c</errorDisplayField>
+    <errorConditionFormula>OR(Resultado_Gorilla__c &lt; 0,Resultado_Gorilla__c   &gt;  1)</errorConditionFormula>
     <errorMessage>Debe ingresar un porcentaje válido (entre 0 y 100%)</errorMessage>
 </ValidationRule>

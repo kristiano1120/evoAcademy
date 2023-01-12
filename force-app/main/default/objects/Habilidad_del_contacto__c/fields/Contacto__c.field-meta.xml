@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacto__c</fullName>
+    <description>contacto que se asignara dicha habilidad</description>
+    <externalId>false</externalId>
+    <label>Contacto</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Habilidades del contacto</relationshipLabel>
+    <relationshipName>Habilidades_del_contacto</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clase__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Clase que por haberse finalizado su contenido habilita un quiz</description>
+    <externalId>false</externalId>
+    <label>Clase</label>
+    <referenceTo>Clase__c</referenceTo>
+    <relationshipLabel>Quizzes</relationshipLabel>
+    <relationshipName>Quizzes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

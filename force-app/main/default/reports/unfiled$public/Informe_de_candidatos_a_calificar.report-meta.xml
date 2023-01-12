@@ -32,10 +32,6 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Lead.Razonamiento_numerico__c</field>
     </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>Lead.Total_Gorilla__c</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>STATUS</column>

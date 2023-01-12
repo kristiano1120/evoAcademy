@@ -35,6 +35,10 @@
                 <behavior>Edit</behavior>
                 <field>Modalidad_de_trabajo__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tiene_personas_a_cargo__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

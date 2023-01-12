@@ -4,48 +4,8 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
-            <inputField>Cargo2__c</inputField>
-            <outputField>Cargo2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Jefe_inmediato2__c</inputField>
-            <outputField>Jefe_inmediato2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nombre_de_la_empresa2__c</inputField>
-            <outputField>Nombre_de_la_empresa2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Razonamiento_numerico__c</inputField>
-            <outputField>Razonamiento_numerico__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Tipo_de_Identificacion__c</inputField>
-            <outputField>Tipo_de_Identificacion__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Total_Gorilla__c</inputField>
-            <outputField>Total_Gorilla__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Titulo_adquirido__c</inputField>
-            <outputField>Titulo_adquirido__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>T_tulo_al_que_aspira__c</inputField>
-            <outputField>Titulo_al_que_aspira__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Acepta_terminos_y_condiciones__c</inputField>
-            <outputField>Acepta_terminos_y_condiciones__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Matematicas_intermedias__c</inputField>
-            <outputField>Matematicas_intermedias__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nivel_actual__c</inputField>
-            <outputField>Nivel_actual__c</outputField>
+            <inputField>Assessment__c</inputField>
+            <outputField>Assessmentc__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Atencion_al_detalle__c</inputField>
@@ -124,16 +84,16 @@
             <outputField>Fecha_de_nacimiento__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>Feedback_Terminos_y_Condiciones__c</inputField>
+            <outputField>Feedback_Terminos_y_Condiciones__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Feedback_Entrevista_Psicot_cnica__c</inputField>
             <outputField>Feedback_Entrevista_Psicot_cnica__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Feedback_Entrevista_Tecnica__c</inputField>
             <outputField>Feedback_Entrevista_Tecnica__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Feedback_Terminos_y_Condiciones__c</inputField>
-            <outputField>Feedback_Terminos_y_Condiciones__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Hoja_de_vida__c</inputField>
@@ -154,6 +114,14 @@
         <mappingFields>
             <inputField>Matematicas_basicas_de_tres_digitos__c</inputField>
             <outputField>Matematicas_basicas_de_tres_digitos__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Matematicas_intermedias__c</inputField>
+            <outputField>Matematicas_intermedias__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nivel_actual__c</inputField>
+            <outputField>Nivel_actual__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Nivel_de_escolaridad__c</inputField>
@@ -178,6 +146,46 @@
         <mappingFields>
             <inputField>Fecha_de_inicio2__c</inputField>
             <outputField>Fecha_de_inicio2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Cargo2__c</inputField>
+            <outputField>Cargo2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Jefe_inmediato2__c</inputField>
+            <outputField>Jefe_inmediato2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nombre_de_la_empresa2__c</inputField>
+            <outputField>Nombre_de_la_empresa2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Razonamiento_numerico__c</inputField>
+            <outputField>Razonamiento_numerico__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Resultado_Gorilla__c</inputField>
+            <outputField>Total_Gorilla__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Tipo_de_Identificacion__c</inputField>
+            <outputField>Tipo_de_Identificacion__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Titulo_adquirido__c</inputField>
+            <outputField>Titulo_adquirido__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>T_tulo_al_que_aspira__c</inputField>
+            <outputField>Titulo_al_que_aspira__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Acepta_terminos_y_condiciones__c</inputField>
+            <outputField>Acepta_terminos_y_condiciones__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Aprobo__c</inputField>
+            <outputField>Aprobo__c</outputField>
         </mappingFields>
         <outputObject>Contact</outputObject>
     </objectMapping>

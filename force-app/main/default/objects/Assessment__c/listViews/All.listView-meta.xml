@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Tipo_de_assessment__c</columns>
+    <columns>Nombre_del_evaluado__c</columns>
+    <columns>Prueba_1__c</columns>
+    <columns>Resultado_1__c</columns>
+    <columns>Prueba_2__c</columns>
+    <columns>Resultado_2__c</columns>
+    <columns>Prueba_3__c</columns>
+    <columns>Resultado_3__c</columns>
+    <columns>Prueba_4__c</columns>
+    <columns>Resultado_4__c</columns>
+    <columns>Prueba_5__c</columns>
+    <columns>Resultado_5__c</columns>
+    <columns>Total_assessment__c</columns>
     <filterScope>Everything</filterScope>
     <label>Todos</label>
 </ListView>

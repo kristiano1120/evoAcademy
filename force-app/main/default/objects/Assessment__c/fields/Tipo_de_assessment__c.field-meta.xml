@@ -12,9 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Angular</fullName>
+                <fullName>Angular_developer</fullName>
                 <default>false</default>
-                <label>Angular</label>
+                <label>Angular Developer</label>
             </value>
             <value>
                 <fullName>DevOps</fullName>
@@ -22,14 +22,34 @@
                 <label>DevOps</label>
             </value>
             <value>
-                <fullName>React</fullName>
+                <fullName>React_native_developer</fullName>
                 <default>false</default>
-                <label>React</label>
+                <label>React Native Developer</label>
             </value>
             <value>
                 <fullName>Salesforce</fullName>
                 <default>false</default>
                 <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Backend Developer</fullName>
+                <default>false</default>
+                <label>Backend Developer</label>
+            </value>
+            <value>
+                <fullName>React_developer</fullName>
+                <default>false</default>
+                <label>React Developer</label>
+            </value>
+            <value>
+                <fullName>Full Stack React .NET Core Developer</fullName>
+                <default>false</default>
+                <label>Full Stack React .NET Core Developer</label>
+            </value>
+            <value>
+                <fullName>Full Stack Developer</fullName>
+                <default>false</default>
+                <label>Full Stack Developer</label>
             </value>
         </valueSetDefinition>
     </valueSet>

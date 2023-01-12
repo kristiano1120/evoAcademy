@@ -4,6 +4,5 @@
     <active>true</active>
     <description>Valida que si se va a avanzar a etapa psicotecnica el campo de aprobo debe de ser verdadero</description>
     <errorConditionFormula>IF(ISPICKVAL(PRIORVALUE( Status ) , &quot;Prueba presentada&quot;) &amp;&amp; ISPICKVAL(Status,&quot;Cualificación psicotécnica&quot;) &amp;&amp; Aprobo__c = false , True, False)</errorConditionFormula>
-    <errorDisplayField>Total_Gorilla__c</errorDisplayField>
     <errorMessage>Para avanzar a la etapa Cualificación psicotecnia es necesario ingresar los resultados del test gorilla</errorMessage>
 </ValidationRule>

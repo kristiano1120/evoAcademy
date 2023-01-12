@@ -156,7 +156,7 @@
     <gender>Feminine</gender>
     <label>Assessment</label>
     <nameField>
-        <displayFormat>ASS-{0000}</displayFormat>
+        <displayFormat>ASM-{0000}</displayFormat>
         <label>Identificador</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>

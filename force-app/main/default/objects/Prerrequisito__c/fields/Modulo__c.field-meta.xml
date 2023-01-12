@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modulo__c</fullName>
+    <description>Modulo al que sera asignado dicho prerrequisito</description>
+    <externalId>false</externalId>
+    <label>Módulo</label>
+    <referenceTo>M_dulo__c</referenceTo>
+    <relationshipLabel>Prerrequisitos</relationshipLabel>
+    <relationshipName>Prerrequisitos</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

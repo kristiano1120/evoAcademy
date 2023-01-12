@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clase__c</fullName>
+    <description>Clase que va ser asociada a la cohorte</description>
+    <externalId>false</externalId>
+    <label>Clase</label>
+    <referenceTo>Clase__c</referenceTo>
+    <relationshipLabel>Clases de cohorte</relationshipLabel>
+    <relationshipName>Clases_de_cohorte</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

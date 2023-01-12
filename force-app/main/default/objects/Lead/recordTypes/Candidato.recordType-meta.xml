@@ -4628,6 +4628,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Tiene_personas_a_cargo__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Si</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Tipo_de_Identificacion__c</picklist>
         <values>
             <fullName>Cédula de Ciudadanía</fullName>

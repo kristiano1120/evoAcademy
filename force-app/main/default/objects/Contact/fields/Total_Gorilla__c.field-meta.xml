@@ -4,7 +4,7 @@
     <description>Puntaje total del examen test gorilla</description>
     <externalId>false</externalId>
     <label>Total Gorilla</label>
-    <precision>5</precision>
+    <precision>18</precision>
     <required>false</required>
     <scale>2</scale>
     <trackFeedHistory>false</trackFeedHistory>

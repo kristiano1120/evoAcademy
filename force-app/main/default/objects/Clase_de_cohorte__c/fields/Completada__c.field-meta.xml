@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completada__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Una vez el contenido de la clase ha sido dictada debe marcarse como completada</description>
+    <externalId>false</externalId>
+    <label>¿Completada?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

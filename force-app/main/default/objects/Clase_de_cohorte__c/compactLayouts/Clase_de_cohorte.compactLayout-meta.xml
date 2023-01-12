@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clase_de_cohorte</fullName>
+    <fields>Clase__c</fields>
+    <fields>Cohorte__c</fields>
+    <fields>Completada__c</fields>
+    <label>Clase de cohorte</label>
+</CompactLayout>

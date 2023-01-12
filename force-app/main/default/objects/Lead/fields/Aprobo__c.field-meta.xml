@@ -3,7 +3,7 @@
     <fullName>Aprobo__c</fullName>
     <description>Indica si el candidato aprobó el test gorilla</description>
     <externalId>false</externalId>
-    <formula>IF(Total_Gorilla__c  &gt;= 0.65, true, false)</formula>
+    <formula>IF( Resultado_Gorilla__c   &gt;= 0.65, true, false)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>¿Aprobó?</label>
     <type>Checkbox</type>

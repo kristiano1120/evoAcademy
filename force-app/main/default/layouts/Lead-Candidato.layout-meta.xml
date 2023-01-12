@@ -196,14 +196,14 @@
                 <field>Test_gorilla_enviado__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Total_Gorilla__c</field>
+                <behavior>Readonly</behavior>
+                <field>Resultado_Gorilla__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Resultados_test_Gorilla__c</field>
+                <field>Assessment__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>

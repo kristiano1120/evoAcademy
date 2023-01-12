@@ -16,8 +16,19 @@
     <navType>Standard</navType>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
+    <tabs>Assessment__c</tabs>
     <tabs>standard-Customer</tabs>
     <tabs>standard-Campaign</tabs>
+    <tabs>Quiz__c</tabs>
+    <tabs>M_dulo__c</tabs>
+    <tabs>Ruta__c</tabs>
+    <tabs>Clase__c</tabs>
+    <tabs>Certificaci_n__c</tabs>
+    <tabs>Cohorte__c</tabs>
+    <tabs>Prueba__c</tabs>
+    <tabs>seguimiento_de_proyecto__c</tabs>
+    <tabs>secciones_de_certificacion__c</tabs>
+    <tabs>certificacion_de_contacto_en_cohorte__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>E_volution_Academy_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_contratacion__c</fullName>
+    <description>Fecha estipulada para que los candidatos que hayan atravesado el proceso de selección exitosamente sean contratados y comiencen a desempeñar sus labores</description>
+    <externalId>false</externalId>
+    <label>Fecha de contratación</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>
