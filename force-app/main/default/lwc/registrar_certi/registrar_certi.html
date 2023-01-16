@@ -1,0 +1,27 @@
+<template>
+    <lightning-record-edit-form
+        object-api-name="Certificaci_n__c"
+        form-class="slds-p-horizontal_small"
+        onsuccess={handleSuccess}>
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name="action:new_note" size="small"></lightning-icon>
+                Registrar intento de certificación
+            </h3>
+            <lightning-input-field field-name={tipoCerti} value={tipocer}></lightning-input-field>
+            <lightning-input-field field-name={certificacion} value={certif}></lightning-input-field>
+            <lightning-input-field field-name={miembro} value={recordId}></lightning-input-field>
+            <lightning-input-field field-name="Resultado__c"></lightning-input-field>
+            <lightning-input-field field-name="Aprueba__c"></lightning-input-field>
+            <div slot="footer">
+                <lightning-button 
+                class="slds-m-top_small"
+                variant="brand"
+                type="submit"
+                name="registrar"
+                label="Registrar">
+            </lightning-button>
+            </div>
+        </lightning-card>
+    </lightning-record-edit-form>
+</template>
