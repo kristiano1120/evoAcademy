@@ -156,9 +156,10 @@
     <gender>Feminine</gender>
     <label>Certificación</label>
     <nameField>
-        <label>Nombre</label>
+        <displayFormat>Certificación-{000}</displayFormat>
+        <label>Código de Certificación</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Certificaciones</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>

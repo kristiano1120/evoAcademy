@@ -100,6 +100,10 @@
             <outputField>Hoja_de_vida__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>Id18__c</inputField>
+            <outputField>LeadId__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Institucion_Educativa__c</inputField>
             <outputField>Institucion_Educativa__c</outputField>
         </mappingFields>

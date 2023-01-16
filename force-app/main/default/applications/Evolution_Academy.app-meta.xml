@@ -14,6 +14,38 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>E-volution Academy</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cohorte_P_gina_de_registro1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Cohorte__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cohorte_P_gina_de_registro1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Cohorte__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Entrenador Salesforce</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cohorte_P_gina_de_registro1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Cohorte__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Entrenador Salesforce</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cohorte_P_gina_de_registro1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Cohorte__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Assessment__c</tabs>
@@ -28,7 +60,6 @@
     <tabs>Prueba__c</tabs>
     <tabs>seguimiento_de_proyecto__c</tabs>
     <tabs>secciones_de_certificacion__c</tabs>
-    <tabs>certificacion_de_contacto_en_cohorte__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>E_volution_Academy_UtilityBar</utilityBar>
 </CustomApplication>

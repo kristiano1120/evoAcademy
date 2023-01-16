@@ -7,7 +7,7 @@
     <referenceTo>Habilidad__c</referenceTo>
     <relationshipLabel>Habilidades del contacto</relationshipLabel>
     <relationshipName>Habilidades_del_contacto</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>

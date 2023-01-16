@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Contacto__c</fullName>
+    <fullName>Candidato__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <description>Contacto al que se asignara dicha habilidad</description>
     <externalId>false</externalId>
-    <label>Contacto</label>
+    <label>Candidato</label>
     <lookupFilter>
         <active>true</active>
         <booleanFilter>1 OR 2</booleanFilter>
         <filterItems>
-            <field>Contact.RecordType.Name</field>
+            <field>Lead.RecordType.Name</field>
             <operation>equals</operation>
-            <value>Empleado E-volution</value>
+            <value>Candidato E-Volution</value>
         </filterItems>
         <filterItems>
-            <field>Contact.RecordType.Name</field>
+            <field>Lead.RecordType.Name</field>
             <operation>equals</operation>
-            <value>Empleado Salesforce</value>
+            <value>Candidato Salesforce</value>
         </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>
-    <referenceTo>Contact</referenceTo>
-    <relationshipLabel>Habilidades del contacto</relationshipLabel>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Habilidades del candidato</relationshipLabel>
     <relationshipName>Habilidades_del_contacto</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>
