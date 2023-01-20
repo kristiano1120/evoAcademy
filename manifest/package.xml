@@ -29,8 +29,8 @@
         <name>StaticResource</name>
     </types>-->
     <types>
-        <members>RRHH</members>
-        <name>Profile</name>
+        <members>Notificar_aprobaci_n_a_entrenador_1673968608814</members>
+        <name>EmailTemplate</name>
     </types>
     <types>
         <members>Reclutador</members>

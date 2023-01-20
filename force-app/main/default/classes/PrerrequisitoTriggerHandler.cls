@@ -1,5 +1,5 @@
 public class PrerrequisitoTriggerHandler implements TriggerHandler{
-	 private boolean triggerIsExecuting;
+	private boolean triggerIsExecuting;
     private integer triggerSize;
     public PrerrequisitoTriggerHandler(boolean triggerIsExecuting, integer triggerSize) {
         this.triggerIsExecuting = triggerIsExecuting;

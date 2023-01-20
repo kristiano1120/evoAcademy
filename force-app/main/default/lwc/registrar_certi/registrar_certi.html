@@ -1,5 +1,6 @@
 <template>
-    <lightning-record-edit-form
+    <template if:true={modalIntento}>
+        <lightning-record-edit-form
         object-api-name="Certificaci_n__c"
         form-class="slds-p-horizontal_small"
         onsuccess={handleSuccess}>
@@ -8,20 +9,37 @@
                 <lightning-icon icon-name="action:new_note" size="small"></lightning-icon>
                 Registrar intento de certificación
             </h3>
-            <lightning-input-field field-name={tipoCerti} value={tipocer}></lightning-input-field>
-            <lightning-input-field field-name={certificacion} value={certif}></lightning-input-field>
             <lightning-input-field field-name={miembro} value={recordId}></lightning-input-field>
-            <lightning-input-field field-name="Resultado__c"></lightning-input-field>
+            <lightning-input-field field-name="Tipo_de_certificaci_n__c"></lightning-input-field>
+            <lightning-input-field field-name="Certificaci_n__c" value={selectedValue} onchange={handleSelection}></lightning-input-field>
+            <lightning-input-field field-name="Certificaciones_Salesforce__c"></lightning-input-field>
             <lightning-input-field field-name="Aprueba__c"></lightning-input-field>
+            <lightning-input-field field-name="Resultado__c"></lightning-input-field>
             <div slot="footer">
                 <lightning-button 
-                class="slds-m-top_small"
-                variant="brand"
-                type="submit"
-                name="registrar"
-                label="Registrar">
-            </lightning-button>
+                    class="slds-m-top_small"
+                    variant="brand"
+                    type="submit"
+                    
+                    name="registrar"
+                    label="Registrar">
+                </lightning-button>
             </div>
         </lightning-card>
     </lightning-record-edit-form>
+    </template>
+    
+    <template if:true={modalTabla}>
+        <lightning-card>
+            <lightning-datatable
+                    key-field="idsecc"
+                    data={data}
+                    show-row-number-column
+                    row-number-offset={rowOffset}
+                    
+                    columns={columns}
+                    onsave={handleSave}>
+            </lightning-datatable>
+        </lightning-card>
+    </template>
 </template>

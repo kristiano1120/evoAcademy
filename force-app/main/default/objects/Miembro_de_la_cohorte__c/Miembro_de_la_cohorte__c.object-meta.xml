@@ -132,27 +132,27 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>formato_empleado</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Contendra todas las habilidades y/o conocimientos con los que cuenta el contacto</description>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>false</enableBulkApi>
+    <description>Objeto junction entre contacto y cohorte</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
-    <enableSharing>false</enableSharing>
-    <enableStreamingApi>false</enableStreamingApi>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <gender>Feminine</gender>
-    <label>Habilidad del contacto</label>
+    <gender>Masculine</gender>
+    <label>Miembro de la cohorte</label>
     <nameField>
-        <displayFormat>HC-{00000}</displayFormat>
-        <label>Nombre</label>
+        <displayFormat>MC-{0000}</displayFormat>
+        <label>Nombre de Miembro de la cohorte</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Habilidades del contacto</pluralLabel>
+    <pluralLabel>Miembros de la cohorte</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
