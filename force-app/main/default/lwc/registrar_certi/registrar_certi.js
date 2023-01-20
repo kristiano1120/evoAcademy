@@ -4,9 +4,9 @@ import registrar from '@salesforce/apex/Certificacion.obtenerModulo';
 import secciones from '@salesforce/apex/Certificacion.obtenerSecciones';
 import savesec from '@salesforce/apex/Certificacion.SaveSecciones';
 
-import TIPOC from '@salesforce/schema/Certificaci_n__c.Tipo_de_certificaci_n__c';
-import CERTI from '@salesforce/schema/Certificaci_n__c.Certificaci_n__c';
-import MIEMBRO from '@salesforce/schema/Certificaci_n__c.Miembro_de_la_cohorte__c';
+import TIPOC from '@salesforce/schema/Intento_de_certificacion__c.Tipo_de_certificaci_n__c';
+import CERTI from '@salesforce/schema/Intento_de_certificacion__c.Certificaci_n__c';
+import MIEMBRO from '@salesforce/schema/Intento_de_certificacion__c.Miembro_de_la_cohorte__c';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
