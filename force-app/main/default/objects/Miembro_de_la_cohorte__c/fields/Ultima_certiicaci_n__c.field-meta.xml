@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultima_certiicaci_n__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Hace referencia al último intento de certificación realizado por el empleado en una cohorte</description>
+    <externalId>false</externalId>
+    <label>Última certicación</label>
+    <referenceTo>Intento_de_certificacion__c</referenceTo>
+    <relationshipLabel>Miembros de la cohorte</relationshipLabel>
+    <relationshipName>Miembros_de_la_cohorte</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

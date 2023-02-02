@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidato Salesforce</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Para cargar los resultados de las pruebas, diríjase a la herramienta Data Import Wizzard desde el apartado configuración.&lt;/p&gt;</info>
+        <picklistValueName>Assessment</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Calificacion_Psicotecnica__c</fieldNames>
+        <fieldNames>Feedback_Entrevista_Psicot_cnica__c</fieldNames>
+        <picklistValueName>Cualificación psicotécnica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Calificacion_Tecnica__c</fieldNames>
+        <fieldNames>Feedback_Entrevista_Tecnica__c</fieldNames>
+        <picklistValueName>Cualificación técnica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Acepta_terminos_y_condiciones__c</fieldNames>
+        <fieldNames>Feedback_Terminos_y_Condiciones__c</fieldNames>
+        <info>&lt;p&gt;&lt;img src=&quot;https://e-volution-e-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFDn000000Hv0N&amp;amp;feoid=Info&amp;amp;refid=0EMDn0000009hc0&quot;&gt;&lt;/img&gt;&lt;img src=&quot;https://e-volution-e-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFDn000000Hv0N&amp;amp;feoid=Info&amp;amp;refid=0EMDn0000009hbv&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>Entrevista_final</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;img src=&quot;https://e-volution-e-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFDn000000HrnG&amp;amp;feoid=Info&amp;amp;refid=0EMDn0000009aC3&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>Preselección</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Candidato</recordTypeName>
+</PathAssistant>

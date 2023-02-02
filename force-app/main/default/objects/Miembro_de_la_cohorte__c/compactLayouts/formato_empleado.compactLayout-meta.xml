@@ -3,5 +3,6 @@
     <fullName>formato_empleado</fullName>
     <fields>Cohorte__c</fields>
     <fields>Empleado__c</fields>
+    <fields>Intentos_realizados__c</fields>
     <label>formato empleado</label>
 </CompactLayout>

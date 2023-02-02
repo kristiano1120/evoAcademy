@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>Quiz__c</tabs>
+    <tabs>M_dulo__c</tabs>
+    <tabs>Ruta__c</tabs>
+    <tabs>Clase__c</tabs>
+    <tabs>Intento_de_certificacion__c</tabs>
+    <tabs>Cohorte__c</tabs>
+    <tabs>Prueba__c</tabs>
+    <tabs>seguimiento_de_proyecto__c</tabs>
+    <tabs>secciones_de_certificacion__c</tabs>
+    <tabs>Certificaciones_Salesforce__c</tabs>
+    <tabs>Resultado_de_secci_n__c</tabs>
+    <tabs>Novedad__c</tabs>
+</CustomApplication>

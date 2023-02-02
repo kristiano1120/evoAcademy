@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>often</animationFrequency>
+    <developerName>Candidato_E_volution</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Candidato E-volution</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>CandidatoEvo</recordTypeName>
+    <sobjectType>Lead</sobjectType>
+    <targetField>Status</targetField>
+    <targetFieldChangeToValues>Cualificación técnica,Entrevista_final,Contratación</targetFieldChangeToValues>
+</AnimationRule>

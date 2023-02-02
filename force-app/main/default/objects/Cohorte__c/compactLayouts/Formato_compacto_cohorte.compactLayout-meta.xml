@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formato_compacto_cohorte</fullName>
+    <fields>Name</fields>
+    <fields>Modulo__c</fields>
+    <fields>Intentos_de_certificacion_permitidos__c</fields>
+    <fields>Fecha_de_inicio__c</fields>
+    <fields>Fecha_fin__c</fields>
+    <fields>Estado__c</fields>
+    <label>Formato compacto cohorte</label>
+</CompactLayout>

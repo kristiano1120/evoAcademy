@@ -1,5 +1,6 @@
 public with sharing class Certificacion {
-
+    
+    // se obtiene el tipo de certificacion y certificacion al que esta asociado el miembro de la cohorte
     @AuraEnabled(cacheable = true)
     public static certiWrapper obtenerModulo(string miembroId) {
         Miembro_de_la_cohorte__c miembro = [SELECT id, Name, Cohorte__c FROM Miembro_de_la_cohorte__c WHERE Id =:miembroId LIMIT 1];
@@ -9,6 +10,17 @@ public with sharing class Certificacion {
         return resultado;
     }
 
+    // se obtienen todas las secciones segun el certificado salesforce registrado
+    @AuraEnabled(cacheable = true)
+    public static List<Resultado_de_secci_n__c> getSecciones(string certificado){
+        return [
+            SELECT id, Certificaci_n__c, nombre_de_seccion__c, Resultado__c
+            FROM Resultado_de_secci_n__c
+            WHERE Certificaci_n__c =: certificado
+        ];
+    }
+
+    // wraper para regresar la infomacion obtenida en el modulo
     public class certiWrapper{
         @AuraEnabled
         public string tipoCertificacion;
@@ -18,54 +30,6 @@ public with sharing class Certificacion {
         public certiWrapper(string tipoCertifi, string certifi){
             this.tipoCertificacion = tipoCertifi;
             this.certificacion = certifi;
-        }
-    }
-
-    @AuraEnabled
-    public static List<secciones> obtenerSecciones(string certificado){
-        try {
-            Certificaciones_Salesforce__c certiSalesforce = [SELECT Id, Name FROM Certificaciones_Salesforce__c WHERE Name =: certificado LIMIT 1];
-            List<secciones_de_certificacion__c> secciones = [SELECT Id, Name, Certificaciones_Salesforce__r.name FROM secciones_de_certificacion__c WHERE Certificaciones_Salesforce__c =: certiSalesforce.Id];
-            List<secciones> seccionesRta = new List<secciones>();
-            for (secciones_de_certificacion__c sc : secciones) {
-                seccionesRta.add(new secciones(sc.id ,sc.Name, sc.Certificaciones_Salesforce__r.name));
-            }
-            system.debug(seccionesRta);
-            return seccionesRta;
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        }
-    }
-
-    @AuraEnabled
-    public static void SaveSecciones(List<secciones_de_certificacion__c> seccionesComp, string idCertiNueva){
-        try {
-            List<secciones_de_certificacion__c> seccionesRecu = new List<secciones_de_certificacion__c>();
-            for (secciones_de_certificacion__c sec : seccionesComp) {
-                secciones_de_certificacion__c s= new secciones_de_certificacion__c();
-                s.Name = sec.Name;
-                s.Certificaciones_Salesforce__c = idCertiNueva;
-                seccionesRecu.add(s);
-            }
-            insert seccionesRecu;
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        }
-    }
-
-    public class secciones 
-    {
-        @AuraEnabled 
-        public string idsecc {get;set;} 
-        @AuraEnabled 
-        public string nombresecc {get;set;}
-        @AuraEnabled 
-        public string certificacionsecc {get;set;}
-
-        public secciones(string id,string nombre, string certificacion){
-            nombresecc = nombre;
-            certificacionsecc = certificacion;
-            idsecc = id;
         }
     }
 }

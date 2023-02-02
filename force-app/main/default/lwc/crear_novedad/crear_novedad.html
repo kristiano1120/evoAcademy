@@ -1,0 +1,19 @@
+<template >
+    <lightning-card title="Crear novedad">
+        <lightning-record-edit-form
+        object-api-name={objectApiName}
+        onsuccess={handleSuccess}>
+            <lightning-input-field field-name={empleado} value={recordId} disabled></lightning-input-field>
+            <lightning-input-field field-name={tipoNovedad} onchange={cambiarCampos}></lightning-input-field>
+            <lightning-input-field field-name={fechaInicio}></lightning-input-field>
+            <lightning-input-field field-name={fechaFinalizacion}></lightning-input-field>
+            <lightning-input-field field-name={comentario}></lightning-input-field>
+            <template if:true={mostrarCampos}>
+                <lightning-input-field field-name={cliente}></lightning-input-field>
+                <lightning-input-field field-name={jornada}></lightning-input-field>
+            </template>
+            <lightning-button variant="brand" type="submit" label="Crear">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

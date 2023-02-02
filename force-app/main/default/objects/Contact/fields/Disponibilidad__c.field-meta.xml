@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disponibilidad__c</fullName>
+    <description>especifica la disponibilidad de este empleado para una asignacion laboral</description>
+    <externalId>false</externalId>
+    <label>Disponibilidad</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disponible</fullName>
+                <default>false</default>
+                <label>Disponible</label>
+            </value>
+            <value>
+                <fullName>No Disponible</fullName>
+                <default>false</default>
+                <label>No Disponible</label>
+            </value>
+            <value>
+                <fullName>Disponible Medio Tiempo</fullName>
+                <default>false</default>
+                <label>Disponible Medio Tiempo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

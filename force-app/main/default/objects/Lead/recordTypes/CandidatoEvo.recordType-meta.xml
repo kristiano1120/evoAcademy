@@ -3,6 +3,7 @@
     <fullName>CandidatoEvo</fullName>
     <active>true</active>
     <businessProcess>Reclutamiento evo</businessProcess>
+    <compactLayoutAssignment>Formato_compacto_candidato</compactLayoutAssignment>
     <description>Tipo de registro dedicado a las personas que aspiran ser empleados de la compañía en la división e-volution</description>
     <label>Candidato E-Volution</label>
     <picklistValues>

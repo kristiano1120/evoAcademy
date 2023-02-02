@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Confirmación prospectos</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Candidato Salesforce,Candidato E-Volution</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <senderEmail>academyevolution2022@gmail.com</senderEmail>
+            <senderName>Administración E-volution</senderName>
+            <template>PlantillasEvolution/Confirmaci_n_de_registro_1672069840281</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

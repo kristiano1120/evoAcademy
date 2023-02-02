@@ -11,7 +11,7 @@ public class PrerrequisitoTriggerHandlerTest {
         insert habilidades;
         list<habilidad__c> habilidadesitas = [select id from habilidad__c];
         
-        m_dulo__c modulo = new m_dulo__c(Name='Modulo de administracion',Tipo_de_certificaci_n__c = 'Administrator',Certificaci_n__c ='Administrator');
+        m_dulo__c modulo = new m_dulo__c(Name='Modulo de administracion',Tipo_de_certificaci_n__c = 'Administrator',Certificaci_n__c ='Administrator', Intentos_de_certificacion_permitidos__c = 10);
         insert modulo;
         m_dulo__c modulito = [select id from m_dulo__c limit 1];
         

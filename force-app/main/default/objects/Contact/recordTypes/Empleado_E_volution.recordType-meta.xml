@@ -4250,6 +4250,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Disponibilidad__c</picklist>
+        <values>
+            <fullName>Disponible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disponible Medio Tiempo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Disponible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
             <fullName>Otro</fullName>

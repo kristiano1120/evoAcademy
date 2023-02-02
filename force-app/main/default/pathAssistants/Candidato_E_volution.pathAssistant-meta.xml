@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidato E-volution</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Calificacion_Tecnica__c</fieldNames>
+        <fieldNames>Feedback_Entrevista_Tecnica__c</fieldNames>
+        <picklistValueName>Cualificación técnica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Feedback_Terminos_y_Condiciones__c</fieldNames>
+        <picklistValueName>Entrevista_final</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Aclaraciones al aspirante:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial;&quot;&gt;Modalidad de la vacante: presencia, virtual, híbrida&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial;&quot;&gt;Conocimientos técnicos: tecnologías relacionadas con la vacante &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial;&quot;&gt;Experiencia requerida&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial;&quot;&gt;Horario laboral&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial;&quot;&gt;Tipo de contrato&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Preselección</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>CandidatoEvo</recordTypeName>
+</PathAssistant>

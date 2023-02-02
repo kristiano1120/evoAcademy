@@ -141,7 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Clase_de_cohorte</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Registro de clase que es asignada a una cohorte</description>
     <enableActivities>true</enableActivities>

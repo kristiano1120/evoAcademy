@@ -141,7 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Quiz</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Evalua contenido y conocimiento de un determinado tema a un determinado grupo de aprendices</description>
     <enableActivities>false</enableActivities>

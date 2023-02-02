@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_novedad__c</fullName>
+    <description>Tipo de novedades que se pueden presentar</description>
+    <externalId>false</externalId>
+    <label>Tipo de novedad</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incapacidad</fullName>
+                <default>false</default>
+                <label>Incapacidad</label>
+            </value>
+            <value>
+                <fullName>Vacaciones</fullName>
+                <default>false</default>
+                <label>Vacaciones</label>
+            </value>
+            <value>
+                <fullName>Licencia</fullName>
+                <default>false</default>
+                <label>Licencia</label>
+            </value>
+            <value>
+                <fullName>Otra</fullName>
+                <default>false</default>
+                <label>Otra</label>
+            </value>
+            <value>
+                <fullName>Asignacion Laboral</fullName>
+                <default>false</default>
+                <label>Asignación Laboral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -44,21 +44,6 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         </connector>
     </assignments>
     <assignments>
-        <description>Reinicia el valor de la variable prerrequisitos_no_cumplidos</description>
-        <name>Copia_1_de_Quitar_prerrequisitos</name>
-        <label>Copia 1 de Quitar prerrequisitos</label>
-        <locationX>270</locationX>
-        <locationY>2342</locationY>
-        <assignmentItems>
-            <assignToReference>prerrequisitos_no_cumplidos</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Obtener_cohorte</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <description>Variable de colección que sirve para almacenar todas las habilidades que tiene el empleado</description>
         <name>Guardar_habilidades</name>
         <label>Guardar habilidades</label>
@@ -73,6 +58,21 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         </assignmentItems>
         <connector>
             <targetReference>Revisar_habilidades</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reinicia el valor de la variable prerrequisitos_no_cumplidos</description>
+        <name>Quitar_prerrequisitos</name>
+        <label>Quitar prerrequisitos</label>
+        <locationX>270</locationX>
+        <locationY>2342</locationY>
+        <assignmentItems>
+            <assignToReference>prerrequisitos_no_cumplidos</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Obtener_cohorte</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -121,7 +121,7 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copia_1_de_Mensaje_de_error_duplicado</targetReference>
+                <targetReference>Mensaje_de_error_duplicado</targetReference>
             </connector>
             <label>Empleado encontrado</label>
         </rules>
@@ -162,6 +162,7 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
     <interviewLabel>pantalla cohorte {!$Flow.CurrentDateTime}</interviewLabel>
     <label>pantalla cohorte</label>
     <loops>
+        <description>Se revisa cada medio de la cohorte por medio de un bucle</description>
         <name>Revisar_cohorte</name>
         <label>Revisar cohorte</label>
         <locationX>182</locationX>
@@ -233,10 +234,13 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         <connector>
             <targetReference>Registro_guardado</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Pantalla_de_error</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Cohorte__c</field>
             <value>
-                <elementReference>Cohorte.recordId</elementReference>
+                <elementReference>Obtener_cohorte.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -293,6 +297,7 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <description>Se obtienen todos los miembros de la cohorte para validar si el miembro que se quiere ingresar ya se encuentra en ella</description>
         <name>Obtener_miembros_cohorte</name>
         <label>Obtener miembros cohorte</label>
         <locationX>182</locationX>
@@ -337,15 +342,15 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
     </recordLookups>
     <screens>
         <description>Mensaje de error cuando el empleado ya es miembro de la cohorte</description>
-        <name>Copia_1_de_Mensaje_de_error_duplicado</name>
-        <label>Copia 1 de Mensaje de error duplicado</label>
+        <name>Mensaje_de_error_duplicado</name>
+        <label>Mensaje de error duplicado</label>
         <locationX>270</locationX>
         <locationY>2222</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Copia_1_de_Quitar_prerrequisitos</targetReference>
+            <targetReference>Quitar_prerrequisitos</targetReference>
         </connector>
         <fields>
             <name>Copia_1_de_mensaje_error_duplicados</name>
@@ -417,6 +422,22 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>Pantalla_de_error</name>
+        <label>Pantalla de error</label>
+        <locationX>490</locationX>
+        <locationY>2834</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>mensaje_error</name>
+            <fieldText>&lt;p&gt;No se ha podido registrar este empleado, por favor revise la información de este o si no cuenta con los permisos adecuados contacte a su administrador&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Pantalla_de_registro</name>
         <label>Pantalla de registro</label>
         <locationX>182</locationX>
@@ -454,36 +475,10 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
                     <stringValue>Miembro_de_la_cohorte__c</stringValue>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>Cohorte</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>label</name>
+                <name>required</name>
                 <value>
-                    <stringValue>Cohorte</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <stringValue>Cohorte__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>Miembro_de_la_cohorte__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>recordId</name>
-                <value>
-                    <elementReference>recordId</elementReference>
+                    <booleanValue>true</booleanValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -511,6 +506,16 @@ Se guarda el prerrequisito que no tiene el empleado en la variable de colección
         <scale>0</scale>
         <value>
             <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>Error</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Debe ingresar un empleado</stringValue>
         </value>
     </variables>
     <variables>

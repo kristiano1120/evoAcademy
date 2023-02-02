@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_intento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de intento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Certificación</fullName>
+                <default>false</default>
+                <label>Certificación</label>
+            </value>
+            <value>
+                <fullName>Simulacro de certificación</fullName>
+                <default>false</default>
+                <label>Simulacro de certificación</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

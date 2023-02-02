@@ -46,20 +46,91 @@
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_E_volution</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_E_volution</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_E_volution</recordType>
+        <type>Flexipage</type>
+        <profile>Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_E_volution</recordType>
+        <type>Flexipage</type>
+        <profile>Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_Salesforce</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_Salesforce</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_Salesforce</recordType>
+        <type>Flexipage</type>
+        <profile>Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contacto_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.Empleado_Salesforce</recordType>
+        <type>Flexipage</type>
+        <profile>Director</profile>
+    </profileActionOverrides>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Assessment__c</tabs>
+    <tabs>Prueba__c</tabs>
     <tabs>standard-Customer</tabs>
     <tabs>standard-Campaign</tabs>
     <tabs>Quiz__c</tabs>
     <tabs>M_dulo__c</tabs>
     <tabs>Ruta__c</tabs>
     <tabs>Clase__c</tabs>
-    <tabs>Certificaci_n__c</tabs>
     <tabs>Cohorte__c</tabs>
-    <tabs>Prueba__c</tabs>
-    <tabs>seguimiento_de_proyecto__c</tabs>
-    <tabs>secciones_de_certificacion__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>Novedad__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>E_volution_Academy_UtilityBar</utilityBar>
 </CustomApplication>
